@@ -229,6 +229,13 @@ npx husky add .husky/pre-commit "npm run pre-commit"
 npx husky add .husky/pre-push "npm run pre-push"
 ```
 
+> Iniciando scripts no package.json.
+
+```sh
+"pre-commit": "",
+"pre-push": "",
+```
+
 <br>
 
 ---
@@ -297,7 +304,7 @@ sonar.javascript.lcov.reportPaths=coverage/lcov.info
 "test:dev": "npm run test -- --progress --browsers Chrome",
 "test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
 "pre-commit": "npx --no-install lint-staged && npm run lint",
-"sonar": "sonar-scanner -Dsonar.login=TOKEN"
+"sonar": "sonar-scanner -Dsonar.login=TOKEN",
 "pre-push": "npm run test:ci && npm run sonar",
 "postinstall": "npx husky install && chmod ug+x .husky/*",
 ```
