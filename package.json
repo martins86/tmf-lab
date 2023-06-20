@@ -10,7 +10,9 @@
     "lint": "ng lint",
     "commit": "git-cz",
     "pwrite": "npx prettier --write --ignore-unknown .",
-    "pcheck": "npx prettier --check ."
+    "pcheck": "npx prettier --check .",
+    "pre-commit": "",
+    "pre-push": ""
   },
   "private": true,
   "dependencies": {
@@ -45,6 +47,7 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.43.0",
+    "husky": "^8.0.3",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
