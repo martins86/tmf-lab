@@ -3,17 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "ng lint",
-    "commit": "git-cz",
+    "start": "ng serve --project=portal --port=4200 --host=0.0.0.0 --disable-host-check --open",
+    "build": "ng build --project=portal --output-hashing=none --vendor-chunk=false --aot",
     "pwrite": "npx prettier --write --ignore-unknown .",
     "pcheck": "npx prettier --check .",
-    "pre-commit": "",
-    "sonar": "",
-    "pre-push": ""
+    "test": "ng test --code-coverage",
+    "test:dev": "npm run test -- --progress --browsers Chrome",
+    "test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
+    "lint": "ng lint",
+    "pre-commit": "npx --no-install lint-staged && npm run lint",
+    "sonar": "sonar-scanner -Dsonar.login=eec5da7da1fe70005eecea1552e3e30de6407ea9",
+    "pre-push": "npm run test:ci && npm run sonar",
+    "postinstall": "npx husky install && chmod ug+x .husky/*"
   },
   "private": true,
   "dependencies": {
