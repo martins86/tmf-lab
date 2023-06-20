@@ -1,7 +1,7 @@
-var getBaseKarmaConfig = require('./../../karma.root.conf');
+var getBaseKarmaConfig = require('./../../karma.root.conf')
 
 module.exports = function (config) {
-  var baseRootConfig = getBaseKarmaConfig();
+  var baseRootConfig = getBaseKarmaConfig()
   config.set({
     ...baseRootConfig,
     coverageReporter: {
@@ -11,5 +11,5 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true,
     },
     logLevel: config.LOG_INFO,
-  });
-};
+  })
+}

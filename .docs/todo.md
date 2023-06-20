@@ -205,8 +205,6 @@ npm install lint-staged --save-dev
 
 <br>
 
-
-
 ## 6. Setup - Adicionando e configurando o Husky
 
 > Adicionando o Husky.
@@ -330,7 +328,6 @@ docker kill sonarqube
 ---
 
 <br>
-
 
 ## 8. Setup - Gerando app portal com eslint, routing e style
 
@@ -489,7 +486,6 @@ module.exports = function (config) {
 ---
 
 <br>
-
 
 ## 11. Setup - Editando os Scripts no package
 
