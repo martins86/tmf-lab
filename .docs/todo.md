@@ -285,6 +285,45 @@ sonar.javascript.lcov.reportPaths=coverage/lcov.info
 
 > Configurando os scripts para o sonar local.
 > Gerar token do projeto no site do https://sonarcloud.io.
+> Crie a empresa e adicione o repositório desejado, logo após ele executara um scan, finalizando o scan acesse o information para obter as keys do projeto.
+
+<br>
+
+> Instale o sonarqube-scanner.
+
+```sh
+npm install sonarqube-scanner --save-dev
+```
+
+> Adicione o script sonar ao package.json.
+
+```sh
+sonar "",
+```
+
+> Rode(via Docker) o container com o sonar.
+> Baixa a ultima versão do sonar e sobe em um container.
+
+```sh
+docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
+```
+
+> Acesse via navegador.
+
+```sh
+http://localhost:9000/
+
+#login: admin
+#password: admin
+```
+
+> Comandos Docker.
+
+```sh
+docker start sonarqube
+docker stop sonarqube
+docker kill sonarqube
+```
 
 <br>
 
