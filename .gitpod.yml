@@ -9,13 +9,33 @@ ports:
     port: 4200
     onOpen: open-browser
     visibility: public
+  - name: GitPod
+    port: 1123
+    onOpen: ignore
+    visibility: private
+  - name: GitPod
+    port: 5900
+    onOpen: ignore
+    visibility: private
+  - name: GitPod
+    port: 6080
+    onOpen: ignore
+    visibility: private
+  - name: GitPod
+    port: 49152
+    onOpen: ignore
+    visibility: private
+  - name: GitPod
+    port: 64120
+    onOpen: ignore
+    visibility: private
 
 # Tarefas na Inicialização
 tasks:
   - name: Setup, Install
     before: export NG_CLI_ANALYTICS=ci
     init: echo n | npm i -g @angular/cli@13.2.0 && npm i -g commitizen
-    command: npm install
+    command: npm install && npm run start
 
 # Github
 github:
