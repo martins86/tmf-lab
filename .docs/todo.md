@@ -498,6 +498,8 @@ module.exports = function (config) {
 ```sh
     "start": "ng serve --project=portal --port=4200 --host=0.0.0.0 --disable-host-check --open",
     "build": "ng build --project=portal --output-hashing=none --vendor-chunk=false --aot",
+    "pwrite": "npx prettier --write --ignore-unknown .",
+    "pcheck": "npx prettier --check .",
     "test": "ng test --code-coverage",
     "test:dev": "npm run test -- --progress --browsers Chrome",
     "test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
