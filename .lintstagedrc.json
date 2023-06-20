@@ -1,0 +1,7 @@
+{
+  "*.{js,ts,md,html,scss,json}": [
+    "npm run pwrite",
+    "git add",
+    "npm run pcheck"
+  ]
+}
