@@ -26,7 +26,7 @@ OS: linux x64
 
 ## 1. Setup - Criar WorkSpace tmf-lab
 
- > cria o workspace dentro de uma pasta que já existe.
+> cria o workspace dentro de uma pasta que já existe.
 
 ```sh
 ng new tmf-lab --create-application=false --directory .
@@ -395,7 +395,6 @@ sonar.javascript.lcov.reportPaths=coverage/lcov.info
 
 > Configurando os scripts para o sonar local.
 > Gerar token do projeto no site do https://sonarcloud.io.
-
 
 <br>
 
