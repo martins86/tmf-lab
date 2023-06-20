@@ -332,29 +332,7 @@ docker kill sonarqube
 <br>
 
 
-## 8. Setup - Editando os Scripts no package
-
-> Scripts no package.json.
-
-```sh
-"start": "ng serve --project=portal --port=5000 --host=0.0.0.0 --disable-host-check --open",
-"build": "ng build --project=portal --base-href ./ --single-bundle=true --output-hashing=none --vendor-chunk=false --aot",
-"test": "ng test --code-coverage",
-"test:dev": "npm run test -- --progress --browsers Chrome",
-"test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
-"pre-commit": "npx --no-install lint-staged && npm run lint",
-"sonar": "sonar-scanner -Dsonar.login=TOKEN",
-"pre-push": "npm run test:ci && npm run sonar",
-"postinstall": "npx husky install && chmod ug+x .husky/*",
-```
-
-<br>
-
----
-
-<br>
-
-## 9. Setup - Instalando packages
+## 8. Setup - Instalando packages
 
 > Angular Material
 
@@ -374,7 +352,7 @@ npm install @ngx-translate/core @ngx-translate/http-loader @ngx-translate-testin
 
 <br>
 
-## 10. Setup - Gerando app portal com eslint, routing e style
+## 9. Setup - Gerando app portal com eslint, routing e style
 
 > Cria o app usando o schema do eslint
 
@@ -388,7 +366,7 @@ ng g @angular-eslint/schematics:app portal --routing=true --style=scss
 
 <br>
 
-## 11. Setup - Configurando o Karma
+## 10. Setup - Configurando o Karma
 
 > Adicionando o karma-spec-reporter.
 
@@ -506,3 +484,25 @@ module.exports = function (config) {
 
 <br>
 
+
+## 11. Setup - Editando os Scripts no package
+
+> Scripts no package.json.
+
+```sh
+    "start": "ng serve --project=portal --port=4200 --host=0.0.0.0 --disable-host-check --open",
+    "build": "ng build --project=portal --output-hashing=none --vendor-chunk=false --aot",
+    "test": "ng test --code-coverage",
+    "test:dev": "npm run test -- --progress --browsers Chrome",
+    "test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
+    "pre-commit": "npx --no-install lint-staged && npm run lint",
+    "sonar": "sonar-scanner -Dsonar.login=eec5da7da1fe70005eecea1552e3e30de6407ea9",
+    "pre-push": "npm run test:ci && npm run sonar",
+    "postinstall": "npx husky install && chmod ug+x .husky/*"
+```
+
+<br>
+
+---
+
+<br>
