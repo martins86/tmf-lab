@@ -12,6 +12,7 @@
     "pwrite": "npx prettier --write --ignore-unknown .",
     "pcheck": "npx prettier --check .",
     "pre-commit": "",
+    "sonar": "",
     "pre-push": ""
   },
   "private": true,
@@ -56,6 +57,7 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "lint-staged": "^13.2.2",
     "prettier": "2.8.8",
+    "sonarqube-scanner": "^3.0.1",
     "typescript": "~4.5.2"
   },
   "config": {
