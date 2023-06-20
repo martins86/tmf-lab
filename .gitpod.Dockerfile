@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -yq \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 
 # install chrome for tests
-RUN apk add chromium &&
-    apk add chromium-chromedriver
+RUN apk add chromium
+RUN apk add chromium-chromedriver
 
 ENV CHROME_BIN=/usr/bin/chromium
 
