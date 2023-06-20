@@ -332,7 +332,21 @@ docker kill sonarqube
 <br>
 
 
-## 8. Setup - Instalando packages
+## 8. Setup - Gerando app portal com eslint, routing e style
+
+> Cria o app usando o schema do eslint
+
+```sh
+ng g @angular-eslint/schematics:app portal --routing=true --style=scss
+```
+
+<br>
+
+---
+
+<br>
+
+## 9. Setup - Instalando packages
 
 > Angular Material
 
@@ -344,20 +358,6 @@ ng add @angular/material@13.2.5
 
 ```sh
 npm install @ngx-translate/core @ngx-translate/http-loader @ngx-translate-testing
-```
-
-<br>
-
----
-
-<br>
-
-## 9. Setup - Gerando app portal com eslint, routing e style
-
-> Cria o app usando o schema do eslint
-
-```sh
-ng g @angular-eslint/schematics:app portal --routing=true --style=scss
 ```
 
 <br>
