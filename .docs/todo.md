@@ -205,7 +205,144 @@ npm install lint-staged --save-dev
 
 <br>
 
-## 6. Setup - Configurando o Karma
+
+
+## 6. Setup - Adicionando e configurando o Husky
+
+> Adicionando o Husky.
+
+```sh
+npm install husky --save-dev
+```
+
+> Iniciando configuração do Husky.
+
+```sh
+npx husky install
+```
+
+```sh
+npx husky add .husky/pre-commit "npm run pre-commit"
+```
+
+```sh
+npx husky add .husky/pre-push "npm run pre-push"
+```
+
+<br>
+
+---
+
+<br>
+
+## 7. Setup - Adicionando e configurando o SonarCloud
+
+> Acesse o https://sonarcloud.io entre com sua conta do github para acesso aos projetos.
+
+```sh
+https://sonarcloud.io
+```
+
+> Crie a empresa e adicione o repositório desejado, logo após ele executara um scan, finalizando o scan acesse o information para obter as keys do projeto.
+
+```sh
+https://sonarcloud.io/project/information?id=martins86_tmf-lab
+```
+
+> Adicionando sonar-project.properties.
+
+```sh
+sonar.host.url=https://sonarcloud.io
+sonar.organization=martins86
+sonar.projectVersion=1.0
+sonar.projectName=martins86_tmf-lab
+sonar.projectKey=martins86_tmf-lab
+
+sonar.links.homepage=https://martins86.github.io/tmf-lab
+sonar.links.ci=https://app.travis-ci.com/github/martins86/tmf-lab
+sonar.links.scm=https://github.com/martins86/tmf-lab
+sonar.links.issue=https://github.com/martins86/tmf-lab/issue
+
+sonar.sourceEncoding=UTF-8
+sonar.sources=.
+
+sonar.exclusions=**/node_modules/**,**/*.js
+sonar.coverage.exclusions=**/*.js,**/src/main.ts,**/src/polyfills.ts,**/*environment*.ts,**/*module.ts
+
+sonar.tests=./projects/portal/src
+sonar.test.inclusions=**/*.spec.ts,**/*test.ts
+
+sonar.typescript.tsconfigPath=tsconfig.json
+sonar.javascript.lcov.reportPaths=coverage/lcov.info
+```
+
+> Configurando os scripts para o sonar local.
+> Gerar token do projeto no site do https://sonarcloud.io.
+
+<br>
+
+---
+
+<br>
+
+
+## 8. Setup - Editando os Scripts no package
+
+> Scripts no package.json.
+
+```sh
+"start": "ng serve --project=portal --port=5000 --host=0.0.0.0 --disable-host-check --open",
+"build": "ng build --project=portal --base-href ./ --single-bundle=true --output-hashing=none --vendor-chunk=false --aot",
+"test": "ng test --code-coverage",
+"test:dev": "npm run test -- --progress --browsers Chrome",
+"test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
+"pre-commit": "npx --no-install lint-staged && npm run lint",
+"sonar": "sonar-scanner -Dsonar.login=TOKEN"
+"pre-push": "npm run test:ci && npm run sonar",
+"postinstall": "npx husky install && chmod ug+x .husky/*",
+```
+
+<br>
+
+---
+
+<br>
+
+## 9. Setup - Instalando packages
+
+> Angular Material
+
+```sh
+ng add @angular/material@13.2.5
+```
+
+> Instalando o ngx translate e test
+
+```sh
+npm install @ngx-translate/core @ngx-translate/http-loader @ngx-translate-testing
+```
+
+<br>
+
+---
+
+<br>
+
+## 10. Setup - Gerando app portal com eslint, routing e style
+
+> Cria o app usando o schema do eslint
+
+```sh
+ng g @angular-eslint/schematics:app portal --routing=true --style=scss
+```
+
+<br>
+
+---
+
+<br>
+
+## 11. Setup - Configurando o Karma
 
 > Adicionando o karma-spec-reporter.
 
@@ -323,137 +460,3 @@ module.exports = function (config) {
 
 <br>
 
-## 7. Setup - Adicionando e configurando o Husky
-
-> Adicionando o Husky.
-
-```sh
-npm install husky --save-dev
-```
-
-> Iniciando configuração do Husky.
-
-```sh
-npx husky install
-```
-
-```sh
-npx husky add .husky/pre-commit "npm run pre-commit"
-```
-
-```sh
-npx husky add .husky/pre-push "npm run pre-push"
-```
-
-<br>
-
----
-
-<br>
-
-## 8. Setup - Adicionando e configurando o SonarCloud
-
-> Acesse o https://sonarcloud.io entre com sua conta do github para acesso aos projetos.
-
-```sh
-https://sonarcloud.io
-```
-
-> Crie a empresa e adicione o repositório desejado, logo após ele executara um scan, finalizando o scan acesse o information para obter as keys do projeto.
-
-```sh
-https://sonarcloud.io/project/information?id=martins86_tmf-lab
-```
-
-> Adicionando sonar-project.properties.
-
-```sh
-sonar.host.url=https://sonarcloud.io
-sonar.organization=martins86
-sonar.projectVersion=1.0
-sonar.projectName=martins86_tmf-lab
-sonar.projectKey=martins86_tmf-lab
-
-sonar.links.homepage=https://martins86.github.io/tmf-lab
-sonar.links.ci=https://app.travis-ci.com/github/martins86/tmf-lab
-sonar.links.scm=https://github.com/martins86/tmf-lab
-sonar.links.issue=https://github.com/martins86/tmf-lab/issue
-
-sonar.sourceEncoding=UTF-8
-sonar.sources=.
-
-sonar.exclusions=**/node_modules/**,**/*.js
-sonar.coverage.exclusions=**/*.js,**/src/main.ts,**/src/polyfills.ts,**/*environment*.ts,**/*module.ts
-
-sonar.tests=./projects/portal/src
-sonar.test.inclusions=**/*.spec.ts,**/*test.ts
-
-sonar.typescript.tsconfigPath=tsconfig.json
-sonar.javascript.lcov.reportPaths=coverage/lcov.info
-
-```
-
-> Configurando os scripts para o sonar local.
-> Gerar token do projeto no site do https://sonarcloud.io.
-
-<br>
-
----
-
-<br>
-
-## 9. Setup - Editando os Scripts no package
-
-> Scripts no package.json.
-
-```sh
-"start": "ng serve --project=portal --port=5000 --host=0.0.0.0 --disable-host-check --open",
-"build": "ng build --project=portal --base-href ./ --single-bundle=true --output-hashing=none --vendor-chunk=false --aot",
-"test": "ng test --code-coverage",
-"test:dev": "npm run test -- --progress --browsers Chrome",
-"test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
-"pre-commit": "npx --no-install lint-staged && npm run lint",
-"sonar": "sonar-scanner -Dsonar.login=TOKEN"
-"pre-push": "npm run test:ci && npm run sonar",
-"postinstall": "npx husky install && chmod ug+x .husky/*",
-```
-
-<br>
-
----
-
-<br>
-
-## 10. Setup - Instalando packages
-
-> Angular Material
-
-```sh
-ng add @angular/material@13.2.5
-```
-
-> Instalando o ngx translate e test
-
-```sh
-npm install @ngx-translate/core @ngx-translate/http-loader @ngx-translate-testing
-```
-
-<br>
-
----
-
-<br>
-
-## 11. Setup - Gerando app portal com eslint, routing e style
-
-> Cria o app usando o schema do eslint
-
-```sh
-ng g @angular-eslint/schematics:app portal --routing=true --style=scss
-```
-
-<br>
-
----
-
-<br>
