@@ -354,10 +354,16 @@ ng g @angular-eslint/schematics:app portal --routing=true --style=scss
 ng add @angular/material@13.2.5
 ```
 
-> Instalando o ngx translate e test
+> Instalando o ngx translate
 
 ```sh
-npm install @ngx-translate/core @ngx-translate/http-loader @ngx-translate-testing
+npm install @ngx-translate/core@14.0.0 @ngx-translate/http-loader@7.0.0
+```
+
+> Instalando o ngx translate test
+
+```sh
+npm install ngx-translate-testing@6.0.0 --save-dev
 ```
 
 <br>
