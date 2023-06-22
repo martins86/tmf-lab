@@ -339,6 +339,12 @@ npm install @ngx-translate/core@14.0.0 @ngx-translate/http-loader@7.0.0
 npm install ngx-translate-testing@6.0.0 --save-dev
 ```
 
+> Instalando package para deploy do projeto no ghpages.
+
+```sh
+ng add angular-cli-ghpages
+```
+
 <br>
 
 ---
