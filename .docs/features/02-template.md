@@ -5,27 +5,27 @@
 > cria o modulo e as rotas do template default.
 
 ```sh
-ng generate module templates/default --module --routing
+ng generate module layout/default --module --routing
 ```
 
 > cria o componente do template default.
 
 ```sh
-ng generate component templates/default
+ng generate component layout/default
 ```
 
 > cria os componentes para o template default.
 
 ```sh
-ng generate component templates/default/components/top-bar
+ng generate component layout/default/components/top-bar
 ```
 
 ```sh
-ng generate component templates/default/components/left-bar
+ng generate component layout/default/components/left-bar
 ```
 
 ```sh
-ng generate component templates/default/components/bottom-bar
+ng generate component layout/default/components/bottom-bar
 ```
 
 <br>
