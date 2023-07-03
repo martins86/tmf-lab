@@ -1,4 +1,3 @@
-import { APP_BASE_HREF } from '@angular/common'
 import { NgModule } from '@angular/core'
 import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { BrowserModule } from '@angular/platform-browser'
@@ -28,12 +27,7 @@ import { DefaultModule } from './layout/default/default.module'
     BrowserAnimationsModule,
     DefaultModule,
   ],
-  providers: [
-    {
-      provide: APP_BASE_HREF,
-      useValue: '/',
-    },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
