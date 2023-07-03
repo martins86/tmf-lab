@@ -12,8 +12,18 @@ mat-drawer-container {
   }
 }
 
+main {
+  padding: 3rem 6rem;
+}
+
 app-top-bar,
 app-bottom-bar {
   background-color: var(--primary-color);
   color: var(--text-primary-lighter-color);
+}
+
+app-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
