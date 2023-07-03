@@ -5,4 +5,9 @@ import { Component, OnInit } from '@angular/core'
   templateUrl: './bottom-bar.component.html',
   styleUrls: ['./bottom-bar.component.scss'],
 })
-export class BottomBarComponent {}
+export class BottomBarComponent {
+  currentYear: string
+  constructor() {
+    this.currentYear = new Date().getFullYear().toString()
+  }
+}
