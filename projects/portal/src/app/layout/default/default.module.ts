@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
+import { TranslateModule } from '@ngx-translate/core'
+
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { ReactiveFormsModule } from '@angular/forms'
@@ -32,7 +34,12 @@ import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component
     LeftBarComponent,
     BottomBarComponent,
   ],
-  imports: [CommonModule, DefaultRoutingModule, ...materialModules],
+  imports: [
+    CommonModule,
+    DefaultRoutingModule,
+    TranslateModule.forChild(),
+    ...materialModules,
+  ],
   exports: [DefaultComponent],
 })
 export class DefaultModule {}

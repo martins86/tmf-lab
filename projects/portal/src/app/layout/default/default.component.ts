@@ -5,4 +5,15 @@ import { Component, OnInit } from '@angular/core'
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.scss'],
 })
-export class DefaultComponent {}
+export class DefaultComponent {
+  leftBarOpen = false
+  maintenance = false
+
+  toggleLeftBar(): void {
+    this.leftBarOpen = !this.leftBarOpen
+  }
+
+  closeLeftBar(): void {
+    this.leftBarOpen = false
+  }
+}
