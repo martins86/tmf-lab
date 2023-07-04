@@ -1,1 +1,47 @@
-<p>left-bar works!</p>
+<nav role="navigation">
+  <mat-nav-list>
+    <mat-list role="list">
+      <h3 mat-subheader color="accent">
+        {{ 'layout.left_bar.text_label_bar.pages' | translate }}
+      </h3>
+      <mat-list-item
+        [routerLink]="['/']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        role="listitem"
+      >
+        <mat-icon mat-list-icon aria-hidden="false" aria-label="ícone home"
+          >home</mat-icon
+        >
+        <div mat-line>
+          {{ 'layout.left_bar.text_menu_pages.page_dashboard' | translate }}
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-nav-list>
+
+  <mat-list role="list">
+    <h3 mat-subheader>
+      {{ 'layout.left_bar.text_label_bar.theme' | translate }}
+    </h3>
+    <mat-list-item role="listitem">
+      <h5 mat-line>
+        {{ 'layout.left_bar.text_label_bar.theme_options' | translate }}
+      </h5>
+      <div class="select-themes">
+        <mat-icon aria-hidden="false" aria-label="ícone sol"
+          >brightness_5</mat-icon
+        >
+        <mat-slide-toggle [formControl]="toggleControl"> </mat-slide-toggle>
+        <mat-icon aria-hidden="false" aria-label="ícone lua">bedtime</mat-icon>
+      </div>
+    </mat-list-item>
+  </mat-list>
+
+  <div class="version-app">
+    <h5>
+      {{ 'layout.left_bar.text_label_bar.version_app' | translate }}:
+      {{ versionApp }}
+    </h5>
+  </div>
+</nav>

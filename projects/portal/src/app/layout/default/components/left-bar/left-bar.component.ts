@@ -1,8 +1,53 @@
-import { Component, OnInit } from '@angular/core'
+import {
+  Component,
+  EventEmitter,
+  HostBinding,
+  OnInit,
+  Output,
+} from '@angular/core'
+import { OverlayContainer } from '@angular/cdk/overlay'
+import { FormControl } from '@angular/forms'
+
+import { UserThemeService } from '@services/user-theme.service'
+import { EnvThemes } from '@utils/env-theme'
 
 @Component({
   selector: 'app-left-bar',
   templateUrl: './left-bar.component.html',
   styleUrls: ['./left-bar.component.scss'],
 })
-export class LeftBarComponent {}
+export class LeftBarComponent implements OnInit {
+  versionApp: string = require('@workspace/package.json').version
+
+  @Output()
+  emitCloseLeftBar: EventEmitter<string> = new EventEmitter()
+
+  @HostBinding('class') className = ''
+
+  toggleControl = new FormControl(false)
+
+  constructor(
+    private overlay: OverlayContainer,
+    private userThemeService: UserThemeService
+  ) {}
+
+  ngOnInit(): void {
+    this.toggleThemes()
+  }
+
+  toggleThemes(): void {
+    this.userThemeService.toggleThemes(
+      this.toggleControl,
+      this.overlay.getContainerElement()
+    )
+
+    const currentTheme = this.userThemeService.getThemeSession()
+    const isDark = currentTheme === EnvThemes.darkClassName
+    this.className = currentTheme
+    this.toggleControl.setValue(isDark)
+  }
+
+  closeLeftBar(): void {
+    this.emitCloseLeftBar.emit('closeLeftBar')
+  }
+}
