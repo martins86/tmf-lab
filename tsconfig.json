@@ -4,6 +4,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
+      "@workspace/*": ["./*"],
       "@app/*": ["./projects/portal/src/app/*"],
       "@core/*": ["./projects/portal/src/app/core/*"],
       "@pages/*": ["./projects/portal/src/app/pages/*"],
