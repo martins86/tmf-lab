@@ -30,14 +30,8 @@
             "polyfills": "projects/portal/src/polyfills.ts",
             "tsConfig": "projects/portal/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/portal/src/favicon.ico",
-              "projects/portal/src/assets"
-            ],
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "projects/portal/src/styles.scss"
-            ],
+            "assets": ["projects/portal/src/assets"],
+            "styles": ["projects/portal/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -99,14 +93,13 @@
             "tsConfig": "projects/portal/tsconfig.spec.json",
             "karmaConfig": "projects/portal/karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/portal/src/favicon.ico",
-              "projects/portal/src/assets"
+            "codeCoverageExclude": [
+              "/**/*.module.ts",
+              "/**/env-theme.ts",
+              "/**/env-translate.ts"
             ],
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "projects/portal/src/styles.scss"
-            ],
+            "assets": ["projects/portal/src/assets"],
+            "styles": ["projects/portal/src/styles.scss"],
             "scripts": []
           }
         },
