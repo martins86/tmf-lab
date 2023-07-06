@@ -24,6 +24,8 @@ const materialModules = [
 import { DefaultRoutingModule } from './default-routing.module'
 import { DefaultComponent } from './default.component'
 
+import { LoadingModule } from './components/loading/loading.module'
+
 import { TopBarComponent } from './components/top-bar/top-bar.component'
 import { LeftBarComponent } from './components/left-bar/left-bar.component'
 import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component'
@@ -40,6 +42,7 @@ import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component
     DefaultRoutingModule,
     TranslateModule.forChild(),
     ...materialModules,
+    LoadingModule,
   ],
   exports: [DefaultComponent],
 })
