@@ -18,4 +18,4 @@ export const EnvTranslations = {
   portugueseLanguage: 'pt',
   portugueseText: 'PT - Português',
   portugueseTranslations: 'pt.json',
-}
+};

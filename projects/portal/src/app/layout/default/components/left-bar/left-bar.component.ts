@@ -4,12 +4,12 @@ import {
   HostBinding,
   OnInit,
   Output,
-} from '@angular/core'
-import { OverlayContainer } from '@angular/cdk/overlay'
-import { FormControl } from '@angular/forms'
+} from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
+import { FormControl } from '@angular/forms';
 
-import { UserThemeService } from '@services/user-theme.service'
-import { EnvThemes } from '@utils/env-theme'
+import { UserThemeService } from '@services/user-theme.service';
+import { EnvThemes } from '@utils/env-theme';
 
 @Component({
   selector: 'app-left-bar',
@@ -17,14 +17,14 @@ import { EnvThemes } from '@utils/env-theme'
   styleUrls: ['./left-bar.component.scss'],
 })
 export class LeftBarComponent implements OnInit {
-  versionApp: string = require('@workspace/package.json').version
+  versionApp: string = require('@workspace/package.json').version;
 
   @Output()
-  emitCloseLeftBar: EventEmitter<string> = new EventEmitter()
+  emitCloseLeftBar: EventEmitter<string> = new EventEmitter();
 
-  @HostBinding('class') className = ''
+  @HostBinding('class') className = '';
 
-  toggleControl = new FormControl(false)
+  toggleControl = new FormControl(false);
 
   constructor(
     private overlay: OverlayContainer,
@@ -32,22 +32,22 @@ export class LeftBarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.toggleThemes()
+    this.toggleThemes();
   }
 
   toggleThemes(): void {
     this.userThemeService.toggleThemes(
       this.toggleControl,
       this.overlay.getContainerElement()
-    )
+    );
 
-    const currentTheme = this.userThemeService.getThemeSession()
-    const isDark = currentTheme === EnvThemes.darkClassName
-    this.className = currentTheme
-    this.toggleControl.setValue(isDark)
+    const currentTheme = this.userThemeService.getThemeSession();
+    const isDark = currentTheme === EnvThemes.darkClassName;
+    this.className = currentTheme;
+    this.toggleControl.setValue(isDark);
   }
 
   closeLeftBar(): void {
-    this.emitCloseLeftBar.emit('closeLeftBar')
+    this.emitCloseLeftBar.emit('closeLeftBar');
   }
 }

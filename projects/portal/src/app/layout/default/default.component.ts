@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-default',
@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./default.component.scss'],
 })
 export class DefaultComponent {
-  leftBarOpen = false
-  maintenance = false
+  leftBarOpen = false;
+  maintenance = false;
 
   toggleLeftBar(): void {
-    this.leftBarOpen = !this.leftBarOpen
+    this.leftBarOpen = !this.leftBarOpen;
   }
 
   closeLeftBar(): void {
-    this.leftBarOpen = false
+    this.leftBarOpen = false;
   }
 }

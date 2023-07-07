@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -11,22 +11,22 @@ export class UserDefinitionsService {
         language: language,
         theme: theme,
       })
-    )
+    );
   }
 
   updateDefinitionItem(defKey: string, defValue: any): void {
-    let session = this.getDefinitions()
+    let session = this.getDefinitions();
 
     if (session) {
-      let newSession = { ...session, [defKey]: defValue }
-      sessionStorage.setItem('user-definitions', JSON.stringify(newSession))
+      let newSession = { ...session, [defKey]: defValue };
+      sessionStorage.setItem('user-definitions', JSON.stringify(newSession));
     }
   }
 
   getDefinitions(): any {
     const definitionSession = sessionStorage.getItem(
       'user-definitions'
-    ) as string
-    return JSON.parse(definitionSession)
+    ) as string;
+    return JSON.parse(definitionSession);
   }
 }

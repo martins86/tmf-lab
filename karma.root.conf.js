@@ -74,5 +74,5 @@ module.exports = function () {
         skipped: 'SKIPPED: ',
       },
     },
-  }
-}
+  };
+};

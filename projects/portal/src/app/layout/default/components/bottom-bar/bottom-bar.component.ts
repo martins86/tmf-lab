@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bottom-bar',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./bottom-bar.component.scss'],
 })
 export class BottomBarComponent {
-  currentYear: string
+  currentYear: string;
   constructor() {
-    this.currentYear = new Date().getFullYear().toString()
+    this.currentYear = new Date().getFullYear().toString();
   }
 }
