@@ -5,8 +5,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { EnvTranslations } from './shared/utils/env-translate';
 import { EnvThemes } from './shared/utils/env-theme';
 
-import { UserDefinitionsService } from './shared/services/user-definitions.service';
-import { UserThemeService } from './shared/services/user-theme.service';
+import { UserDefinitionsService } from './shared/services/user/user-definitions.service';
+import { UserThemeService } from './shared/services/user/user-theme.service';
 
 @Component({
   selector: 'app-root',

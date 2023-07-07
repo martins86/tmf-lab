@@ -7,7 +7,7 @@ import { TranslateStubModule } from '@utils/stubs/translate-stub.module';
 
 import { DefaultModule } from '@layout/default/default.module';
 
-import { UserThemeService } from '@services/user-theme.service';
+import { UserThemeService } from '@services/user/user-theme.service';
 
 import { LeftBarComponent } from './left-bar.component';
 

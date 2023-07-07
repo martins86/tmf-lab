@@ -8,7 +8,7 @@ import {
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { FormControl } from '@angular/forms';
 
-import { UserThemeService } from '@services/user-theme.service';
+import { UserThemeService } from '@services/user/user-theme.service';
 import { EnvThemes } from '@utils/env-theme';
 
 @Component({

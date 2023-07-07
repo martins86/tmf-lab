@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { EnvThemes } from '../utils/env-theme';
+import { EnvThemes } from '../../utils/env-theme';
 
 import { UserDefinitionsService } from './user-definitions.service';
 import { FormControl } from '@angular/forms';
