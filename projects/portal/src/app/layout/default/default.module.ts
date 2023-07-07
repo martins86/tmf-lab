@@ -26,6 +26,8 @@ import { DefaultComponent } from './default.component';
 
 import { LoadingModule } from './components/loading/loading.module';
 
+import { SelectLanguageModule } from '@components/select-language/select-language.module';
+
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component';
@@ -43,6 +45,7 @@ import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component
     TranslateModule.forChild(),
     ...materialModules,
     LoadingModule,
+    SelectLanguageModule,
   ],
   exports: [DefaultComponent],
 })
