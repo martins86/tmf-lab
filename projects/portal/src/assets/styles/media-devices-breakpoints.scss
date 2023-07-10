@@ -1,10 +1,22 @@
-/* Para celulares: */
+/* Mobile First */
+:root {
+  --tablet: only screen and (max-width: 600px);
+  --desktop: only screen and (min-width: 768px);
+  --all-padding: 12px;
+}
+
+.all-padding {
+  padding: var(--all-padding);
+}
+
 [class*='col-'] {
   width: 100%;
 }
 
-/* Para tablets: */
-@media only screen and (min-width: 600px) {
+@media (var(--tablet)) {
+  .all-padding {
+    --all-padding: 24px;
+  }
   .col-s-1 {
     width: 8.33%;
   }
@@ -43,8 +55,11 @@
   }
 }
 
-/* Para desktop: */
-@media only screen and (min-width: 768px) {
+@media (var(--desktop)) {
+  .all-padding {
+    --all-padding: 48px;
+  }
+
   .col-1 {
     width: 8.33%;
   }
