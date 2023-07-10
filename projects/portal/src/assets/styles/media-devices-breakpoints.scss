@@ -3,6 +3,17 @@
   --all-padding: 12px;
 }
 
+.row::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+[class*='col-'] {
+  float: left;
+  padding: 15px;
+}
+
 .all-padding {
   padding: var(--all-padding);
 }

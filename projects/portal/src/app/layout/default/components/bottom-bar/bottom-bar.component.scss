@@ -1,13 +1,15 @@
 footer {
-  width: 100vw;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: var(--text-primary-lighter-color);
+  }
 }
 
-footer p {
-  margin: 0;
+@media only screen and (max-width: 600px) {
+  footer {
+    span {
+      display: none;
+    }
+  }
 }

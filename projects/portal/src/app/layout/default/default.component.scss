@@ -5,25 +5,25 @@
 }
 
 mat-drawer-container {
-  height: calc(100vh - 97px);
-
-  mat-drawer {
-    width: 300px;
-  }
-}
-
-main {
-  padding: 3rem 6rem;
-}
-
-app-top-bar,
-app-bottom-bar {
-  background-color: var(--primary-color);
-  color: var(--text-primary-lighter-color);
+  height: calc(100vh - 112px);
 }
 
 app-bottom-bar {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  mat-drawer-container {
+    height: calc(100vh - 128px);
+
+    mat-drawer {
+      width: 300px;
+    }
+  }
+
+  main {
+    padding: 3rem 6rem;
+  }
 }
