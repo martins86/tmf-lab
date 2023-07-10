@@ -1,77 +1,75 @@
 header {
-  width: 100vw;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
+  mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-single-row {
+    display: flex;
+    justify-content: space-between;
+  }
 
-button.toggle {
-  min-width: unset;
-  padding: unset;
-  border: unset;
-  color: unset;
-  background: unset;
-}
+  #btn-menu-animation {
+    button.toggle {
+      min-width: unset;
+      padding: unset;
+      border: unset;
+      color: unset;
+      background: unset;
+    }
 
-.toggle {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
-}
+    .toggle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      cursor: pointer;
+    }
 
-.toggle span {
-  position: absolute;
-  width: 25px;
-  height: 4px;
-  background-color: var(--text-primary-lighter-color);
-  border-radius: 4px;
-  transition: 0.5s;
-}
+    .toggle span {
+      position: absolute;
+      width: 25px;
+      height: 4px;
+      background-color: var(--text-primary-lighter-color);
+      border-radius: 4px;
+      transition: 0.5s;
+    }
 
-.toggle span:nth-child(1) {
-  transform: translateY(-11px);
-  width: 20px;
-  left: 8px;
-}
+    .toggle span:nth-child(1) {
+      transform: translateY(-11px);
+      width: 20px;
+      left: 8px;
+    }
 
-.toggle.active span:nth-child(1) {
-  width: 30px;
-  transform: translateY(-2px) rotate(45deg);
-  transition-delay: 0.125s;
-  left: 6px;
-}
+    .toggle.active span:nth-child(1) {
+      width: 30px;
+      transform: translateY(-2px) rotate(45deg);
+      transition-delay: 0.125s;
+      left: 6px;
+    }
 
-.toggle span:nth-child(2) {
-  transform: translateY(11px);
-  width: 12px;
-  left: 8px;
-}
+    .toggle span:nth-child(2) {
+      transform: translateY(11px);
+      width: 12px;
+      left: 8px;
+    }
 
-.toggle.active span:nth-child(2) {
-  width: 30px;
-  transform: translateY(-2px) rotate(315deg);
-  transition-delay: 0.25s;
-  left: 6px;
-}
+    .toggle.active span:nth-child(2) {
+      width: 30px;
+      transform: translateY(-2px) rotate(315deg);
+      transition-delay: 0.25s;
+      left: 6px;
+    }
 
-.toggle span:nth-child(3) {
-  left: 8px;
-}
+    .toggle span:nth-child(3) {
+      left: 8px;
+    }
 
-.toggle.active span:nth-child(3) {
-  transform: translateX(60px);
-}
+    .toggle.active span:nth-child(3) {
+      transform: translateX(60px);
+    }
 
-.toggle.active span {
-  background-color: var(--warn-lighter-color);
+    .toggle.active span {
+      background-color: var(--warn-lighter-color);
+    }
+  }
 }

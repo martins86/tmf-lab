@@ -1,13 +1,15 @@
 <header>
-  <div>
-    <button class="toggle" (click)="toggleLeftBar()" title="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
+  <mat-toolbar color="primary">
+    <div id="btn-menu-animation">
+      <button class="toggle" (click)="toggleLeftBar()" title="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
 
-  <div>
-    <app-select-language></app-select-language>
-  </div>
+    <div>
+      <app-select-language></app-select-language>
+    </div>
+  </mat-toolbar>
 </header>
