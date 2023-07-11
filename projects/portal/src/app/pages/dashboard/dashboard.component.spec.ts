@@ -5,6 +5,7 @@ import { TranslateStubModule } from '@utils/stubs/translate-stub.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardModule } from './dashboard.module';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -13,7 +14,7 @@ describe('DashboardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [DashboardComponent],
-      imports: [DashboardModule, TranslateStubModule],
+      imports: [DashboardModule, TranslateStubModule, RouterModule.forRoot([])],
       schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   });
