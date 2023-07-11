@@ -39,19 +39,19 @@ ng generate component layout/default/components/bottom-bar
 > cria o module do loading.
 
 ```sh
-ng g m shared/components/loading
+ng g m layout/default/components/loading
 ```
 
 > cria o componente do loading.
 
 ```sh
-ng g c shared/components/loading
+ng g c layout/default/components/loading
 ```
 
 > cria a service loading.
 
 ```sh
-ng g s shared/services/loading
+ng g s shared/services/loading/loading
 ```
 
 <br>
