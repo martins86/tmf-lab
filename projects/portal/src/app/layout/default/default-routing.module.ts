@@ -7,6 +7,16 @@ const routes: Routes = [
   {
     path: '',
     component: DefaultComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('@pages/dashboard/dashboard.module').then(
+            (module) => module.DashboardModule
+          ),
+        pathMatch: 'full',
+      },
+    ],
   },
 ];
 

@@ -8,6 +8,10 @@ mat-drawer-container {
   height: calc(100vh - 112px);
 }
 
+main {
+  padding: var(--all-padding);
+}
+
 app-bottom-bar {
   position: fixed;
   bottom: 0;
@@ -21,9 +25,5 @@ app-bottom-bar {
     mat-drawer {
       width: 300px;
     }
-  }
-
-  main {
-    padding: 3rem 6rem;
   }
 }
