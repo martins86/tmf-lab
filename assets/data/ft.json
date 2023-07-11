@@ -1,0 +1,11 @@
+{
+  "ft_any_key_a": {
+    "enabled": true
+  },
+  "ft_any_key_b": {
+    "enabled": false
+  },
+  "ft_any_key_c": {
+    "enabled": false
+  }
+}
