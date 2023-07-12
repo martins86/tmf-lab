@@ -1,20 +1,20 @@
 {
   "describe template - Jasmine": {
     "prefix": "describe-jasmine",
-    "body": ["describe('${1:Testing the feature}', () => {", "\t${2}", "});"],
+    "body": ["describe('${1:Testando o }', () => {", "\t${2}", "});"],
     "description": "Template Describe para o jasmine.",
     "scope": "typescript,javascript"
   },
   "it template - Jasmine": {
     "prefix": "it-jasmine",
     "body": [
-      "\tit('${1:should be}', () => {",
+      "\tit('${1:Deve }', () => {",
       "\t\t// Arrange",
       "\t\t${2}",
       "\t\t// Act",
       "\t\t${3}",
       "\t\t// Assert",
-      "\t\texpect(${4})${5:.toBe}(${6})",
+      "\t\texpect(${4})${5:.toBe}(${6});",
       "\t});"
     ],
     "description": "Template It para o jasmine sem Describe.",
@@ -23,14 +23,14 @@
   "describe it template - Jasmine": {
     "prefix": "describe-with-it-jasmine",
     "body": [
-      "describe('${1:Testing the feature}', () => {",
-      "\tit('${2:should be}', () => {",
+      "describe('${1:Testando o }', () => {",
+      "\tit('${2:Deve }', () => {",
       "\t\t// Arrange",
       "\t\t${3}",
       "\t\t// Act",
       "\t\t${4}",
       "\t\t// Assert",
-      "\t\texpect(${5})${6:.toBe}(${7})",
+      "\t\texpect(${5})${6:.toBe}(${7});",
       "\t});",
       "});"
     ],
