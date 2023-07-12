@@ -1,11 +1,11 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
 import { TranslateStubModule } from '@utils/stubs/translate-stub.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardModule } from './dashboard.module';
-import { RouterModule } from '@angular/router';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
