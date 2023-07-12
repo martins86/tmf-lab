@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Data } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,11 +15,11 @@ export class DashboardComponent {
   }
 
   getFeatureToggle(): void {
-    this.activatedRoute.data.subscribe((data: any) => {
+    this.activatedRoute.data.subscribe((data: Data) => {
       const ftKeyAIsEnable: boolean =
-        data?.featureToggleValues.ft_any_key_a.enabled;
+        data?.['featureToggleValues'].ft_any_key_a.enabled;
       const ftKeyCIsEnable: boolean =
-        data?.featureToggleValues.ft_any_key_b.enabled;
+        data?.['featureToggleValues'].ft_any_key_b.enabled;
 
       this.ftAnyKeyA = ftKeyAIsEnable ? ftKeyAIsEnable : false;
       this.ftAnyKeyC = ftKeyCIsEnable ? ftKeyCIsEnable : false;

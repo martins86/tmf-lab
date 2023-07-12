@@ -5,7 +5,7 @@ import { TranslateStubModule } from '@utils/stubs/translate-stub.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardModule } from './dashboard.module';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
