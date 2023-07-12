@@ -1,4 +1,4 @@
-export const EnvTranslations = {
+export const UtilsForTranslations = {
   languages: ['pt', 'en'],
   languageOptions: [
     {

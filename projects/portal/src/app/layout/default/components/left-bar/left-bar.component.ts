@@ -8,8 +8,9 @@ import {
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { FormControl } from '@angular/forms';
 
+import { UtilsForThemes } from '@interfaces/itheme.interface';
+
 import { UserThemeService } from '@services/user/user-theme.service';
-import { EnvThemes } from '@utils/env-theme';
 
 @Component({
   selector: 'app-left-bar',
@@ -42,7 +43,7 @@ export class LeftBarComponent implements OnInit {
     );
 
     const currentTheme = this.userThemeService.getThemeSession();
-    const isDark = currentTheme === EnvThemes.darkClassName;
+    const isDark = currentTheme === UtilsForThemes.darkClassName;
     this.className = currentTheme;
     this.toggleControl.setValue(isDark);
   }

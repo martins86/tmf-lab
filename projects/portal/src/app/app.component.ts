@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 
-import { EnvTranslations } from './shared/utils/env-translate';
-import { EnvThemes } from './shared/utils/env-theme';
+import { UtilsForTranslations } from '@interfaces/itranslate.interface';
+import { UtilsForThemes } from '@interfaces/itheme.interface';
 
-import { UserDefinitionsService } from './shared/services/user/user-definitions.service';
-import { UserThemeService } from './shared/services/user/user-theme.service';
+import { UserDefinitionsService } from '@services/user/user-definitions.service';
+import { UserThemeService } from '@services/user/user-theme.service';
 
 @Component({
   selector: 'app-root',
@@ -33,8 +33,8 @@ export class AppComponent implements OnInit {
       this.setDefinitionDefault(this.session.language, this.session.theme);
     } else {
       this.setDefinitionDefault(
-        EnvTranslations.portugueseLanguage,
-        EnvThemes.lightClassName
+        UtilsForTranslations.portugueseLanguage,
+        UtilsForThemes.lightClassName
       );
     }
   }
@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
   setDefinitionDefault(lang: string, theme: string): void {
     this.userThemeService.setThemeSession(theme);
     this.userDefinitionsService.setDefinitionDefault(lang, theme);
-    this.translateService.addLangs(EnvTranslations.languages);
+    this.translateService.addLangs(UtilsForTranslations.languages);
     this.translateService.setDefaultLang(lang);
     this.translateService.use(lang);
   }

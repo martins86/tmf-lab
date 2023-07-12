@@ -1,4 +1,4 @@
-export const EnvThemes = {
+export const UtilsForThemes = {
   darkClassName: 'dark-theme',
   lightClassName: 'light-theme',
 };

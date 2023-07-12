@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
-import { EnvThemes } from '../../utils/env-theme';
+import { UtilsForThemes } from '@interfaces/itheme.interface';
 
 import { UserDefinitionsService } from './user-definitions.service';
-import { FormControl } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserThemeService {
-  light = EnvThemes.lightClassName;
-  dark = EnvThemes.darkClassName;
+  light = UtilsForThemes.lightClassName;
+  dark = UtilsForThemes.darkClassName;
 
   constructor(private userDefinitionsService: UserDefinitionsService) {}
 
@@ -28,7 +28,7 @@ export class UserThemeService {
 
   getThemeSession(): string {
     let userDefinitionSession = this.userDefinitionsService.getDefinitions();
-    return userDefinitionSession?.theme || EnvThemes.lightClassName;
+    return userDefinitionSession?.theme || UtilsForThemes.lightClassName;
   }
 
   setThemeSession(theme: string): void {
