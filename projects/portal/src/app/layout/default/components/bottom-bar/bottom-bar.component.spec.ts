@@ -1,14 +1,14 @@
 import { DebugElement, NO_ERRORS_SCHEMA, Predicate } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { TranslateTestingModule } from 'ngx-translate-testing';
 
+import { TranslateStubModule } from '@utils/stubs/translate-stub.module';
+import { UtilsForTranslations } from '@interfaces/itranslate.interface';
 import { BottomBarComponent } from './bottom-bar.component';
 import { DefaultModule } from '../../default.module';
-import { TranslateStubModule } from 'projects/portal/src/app/shared/utils/stubs/translate-stub.module';
-import { EnvTranslations } from 'projects/portal/src/app/shared/utils/env-translate';
-import { By } from '@angular/platform-browser';
 
 describe('Testes do BottomBarComponent', () => {
   let component: BottomBarComponent;
@@ -55,8 +55,8 @@ describe('Testes do BottomBarComponent', () => {
           DefaultModule,
           RouterTestingModule,
           TranslateTestingModule.withTranslations(
-            EnvTranslations.englishLanguage,
-            require(`../../../../../assets/i18n/${EnvTranslations.englishTranslations}`)
+            UtilsForTranslations.englishLanguage,
+            require(`../../../../../assets/i18n/${UtilsForTranslations.englishTranslations}`)
           ),
         ],
       }).compileComponents();
@@ -86,8 +86,8 @@ describe('Testes do BottomBarComponent', () => {
           DefaultModule,
           RouterTestingModule,
           TranslateTestingModule.withTranslations(
-            EnvTranslations.portugueseLanguage,
-            require(`../../../../../assets/i18n/${EnvTranslations.portugueseTranslations}`)
+            UtilsForTranslations.portugueseLanguage,
+            require(`../../../../../assets/i18n/${UtilsForTranslations.portugueseTranslations}`)
           ),
         ],
       }).compileComponents();
