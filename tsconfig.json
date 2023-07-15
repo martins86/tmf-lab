@@ -15,7 +15,8 @@
       "@components/*": ["./projects/portal/src/app/shared/components/*"],
       "@layout/*": ["./projects/portal/src/app/layout/*"],
       "@utils/*": ["./projects/portal/src/app/shared/utils/*"],
-      "@environments/*": ["./projects/portal/src/environments/*"]
+      "@environments/*": ["./projects/portal/src/environments/*"],
+      "@enums/*": ["./projects/portal/src/app/shared/enums/*"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
