@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 
+import { ThemeProperties } from '@enums/theme-properties';
+
 import { UtilsForTranslations } from '@interfaces/itranslate.interface';
-import { UtilsForThemes } from '@interfaces/itheme.interface';
 
 import { UserDefinitionsService } from '@services/user/user-definitions.service';
 import { UserThemeService } from '@services/user/user-theme.service';
@@ -34,7 +35,7 @@ export class AppComponent implements OnInit {
     } else {
       this.setDefinitionDefault(
         UtilsForTranslations.portugueseLanguage,
-        UtilsForThemes.lightClassName
+        ThemeProperties.lightClassName
       );
     }
   }

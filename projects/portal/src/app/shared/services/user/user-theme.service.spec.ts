@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { FormControl } from '@angular/forms';
 
-import { UtilsForThemes } from '@interfaces/itheme.interface';
+import { ThemeProperties } from '@enums/theme-properties';
 
 import { UserDefinitionsService } from './user-definitions.service';
 import { UserThemeService } from './user-theme.service';
@@ -142,7 +142,7 @@ describe('Testes do UserThemeService', () => {
     it('Deve retornar o light theme quando o getDefinitions retornar undefined', () => {
       // Arrange
       const theme = { theme: undefined };
-      const themeLight = UtilsForThemes.lightClassName;
+      const themeLight = ThemeProperties.lightClassName;
       const spy = spyOn(
         userDefinitionsService,
         'getDefinitions'
