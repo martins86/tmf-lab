@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./default.component.scss'],
 })
 export class DefaultComponent {
-  leftBarOpen = false;
-  maintenance = false;
+  leftBarOpen: boolean = false;
+  maintenance: boolean = false;
 
   toggleLeftBar(): void {
     this.leftBarOpen = !this.leftBarOpen;

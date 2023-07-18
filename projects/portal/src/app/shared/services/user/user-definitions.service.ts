@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { ISessionUser } from '@interfaces/isession-user.interface';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -23,7 +25,7 @@ export class UserDefinitionsService {
     }
   }
 
-  getDefinitions(): any {
+  getDefinitions(): ISessionUser {
     const definitionSession = sessionStorage.getItem(
       'user-definitions'
     ) as string;

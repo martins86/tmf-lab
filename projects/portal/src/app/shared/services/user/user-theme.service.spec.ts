@@ -1,6 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { FormControl } from '@angular/forms';
 
+import { ISessionUser } from '@interfaces/isession-user.interface';
+
 import { UserDefinitionsService } from './user-definitions.service';
 import { UserThemeService } from './user-theme.service';
 
@@ -109,10 +111,14 @@ describe('Testes do UserThemeService', () => {
   describe('Testando o getThemeSession', () => {
     it('Deve chamar o userDefinitionsService e o getDefinitions', () => {
       // Arrange
+      const mockSession: ISessionUser = {
+        language: 'en',
+        theme: 'dark-theme',
+      };
       const spy = spyOn(
         userDefinitionsService,
         'getDefinitions'
-      ).and.returnValue('any-theme');
+      ).and.returnValue(mockSession);
 
       // Act
       service.getThemeSession();
@@ -123,35 +129,44 @@ describe('Testes do UserThemeService', () => {
 
     it('Deve retornar um theme valido do getDefinitions', () => {
       // Arrange
-      const theme = { theme: 'any-theme' };
+      const mockSession: ISessionUser = {
+        language: 'en',
+        theme: 'dark-theme',
+      };
       const spy = spyOn(
         userDefinitionsService,
         'getDefinitions'
-      ).and.returnValue(theme);
+      ).and.returnValue(mockSession);
 
       // Act
       const response = service.getThemeSession();
 
       // Assert
       expect(spy).toHaveBeenCalledTimes(1);
-      expect(response).toBe(theme.theme);
+      expect(response).toBe(mockSession.theme);
     });
 
     it('Deve retornar o light theme quando o getDefinitions retornar undefined', () => {
       // Arrange
-      const theme = { theme: undefined };
-      const themeLight = 'light-theme';
+      const mockSession: ISessionUser = {
+        language: '',
+        theme: '',
+      };
+      const themeDefault = {
+        language: 'pt',
+        theme: 'light-theme',
+      };
       const spy = spyOn(
         userDefinitionsService,
         'getDefinitions'
-      ).and.returnValue(theme);
+      ).and.returnValue(mockSession);
 
       // Act
       const response = service.getThemeSession();
 
       // Assert
       expect(spy).toHaveBeenCalledTimes(1);
-      expect(response).toBe(themeLight);
+      expect(response).toBe(themeDefault.theme);
     });
   });
 });

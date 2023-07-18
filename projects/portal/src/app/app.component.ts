@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 
+import { ISessionUser } from '@interfaces/isession-user.interface';
+
 import { UserDefinitionsService } from '@services/user/user-definitions.service';
 import { UserThemeService } from '@services/user/user-theme.service';
 
@@ -11,7 +13,7 @@ import { UserThemeService } from '@services/user/user-theme.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  session: any; // TODO: aplicar tipo
+  session: ISessionUser;
   languages: string[] = ['pt', 'en'];
 
   constructor(
@@ -20,7 +22,6 @@ export class AppComponent implements OnInit {
     private userThemeService: UserThemeService
   ) {
     this.session = this.userDefinitionsService.getDefinitions();
-    console.log(this.session);
   }
 
   ngOnInit() {
@@ -28,7 +29,7 @@ export class AppComponent implements OnInit {
   }
 
   firstLoadApp(): void {
-    if (this.session) {
+    if (this.session.language != '' && this.session.theme != '') {
       this.setDefinitionDefault(this.session.language, this.session.theme);
     } else {
       this.setDefinitionDefault('pt', 'light-theme');

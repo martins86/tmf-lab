@@ -72,7 +72,7 @@ describe('Testes do AppComponent', () => {
   describe('Testando o firstLoadApp', () => {
     it('Deve chamar o firstLoadApp com session vazio e guardar/usar os valores default', () => {
       // Arrange
-      app.session = null;
+      app.session = { language: '', theme: '' };
       const spy = spyOn(app, 'setDefinitionDefault');
 
       // Act
