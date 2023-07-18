@@ -1,3 +1,4 @@
+---
 # Imagem Docker
 image:
   file: .gitpod.Dockerfile
@@ -48,3 +49,23 @@ github:
     addComment: true
     addBadge: false
     addLabel: false
+
+vscode:
+  extensions:
+    - hbenl.vscode-jasmine-test-adapter
+    - EditorConfig.EditorConfig
+    - dbaeumer.vscode-eslint
+    - Tobermory.es6-string-html
+    - prantlf.karma-problem-matchers
+    - DavidAnson.vscode-markdownlint
+    - rvest.vs-code-prettier-eslint
+    - esbenp.prettier-vscode
+    - SonarSource.sonarlint-vscode
+    - hbenl.test-adapter-converter
+    - hbenl.vscode-test-explorer
+    - shardulm94.trailing-spaces
+    - vscode-icons-team.vscode-icons
+    - streetsidesoftware.code-spell-checker
+    - streetsidesoftware.code-spell-checker-portuguese-brazilian
+    - formulahendry.auto-rename-tag
+    - formulahendry.auto-close-tag
