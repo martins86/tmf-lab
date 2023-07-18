@@ -6,7 +6,6 @@ import { By } from '@angular/platform-browser';
 import { TranslateTestingModule } from 'ngx-translate-testing';
 
 import { TranslateStubModule } from '@utils/stubs/translate-stub.module';
-import { UtilsForTranslations } from '@interfaces/itranslate.interface';
 import { BottomBarComponent } from './bottom-bar.component';
 import { DefaultModule } from '../../default.module';
 
@@ -55,8 +54,8 @@ describe('Testes do BottomBarComponent', () => {
           DefaultModule,
           RouterTestingModule,
           TranslateTestingModule.withTranslations(
-            UtilsForTranslations.englishLanguage,
-            require(`../../../../../assets/i18n/${UtilsForTranslations.englishTranslations}`)
+            'en',
+            require('../../../../../assets/i18n/en.json')
           ),
         ],
       }).compileComponents();
@@ -86,8 +85,8 @@ describe('Testes do BottomBarComponent', () => {
           DefaultModule,
           RouterTestingModule,
           TranslateTestingModule.withTranslations(
-            UtilsForTranslations.portugueseLanguage,
-            require(`../../../../../assets/i18n/${UtilsForTranslations.portugueseTranslations}`)
+            'pt',
+            require('../../../../../assets/i18n/pt.json')
           ),
         ],
       }).compileComponents();

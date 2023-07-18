@@ -2,10 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 
-import { ThemeProperties } from '@enums/theme-properties';
-
-import { UtilsForTranslations } from '@interfaces/itranslate.interface';
-
 import { UserDefinitionsService } from '@services/user/user-definitions.service';
 import { UserThemeService } from '@services/user/user-theme.service';
 
@@ -15,7 +11,8 @@ import { UserThemeService } from '@services/user/user-theme.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  session: any;
+  session: any; // TODO: aplicar tipo
+  languages: string[] = ['pt', 'en'];
 
   constructor(
     private translateService: TranslateService,
@@ -23,6 +20,7 @@ export class AppComponent implements OnInit {
     private userThemeService: UserThemeService
   ) {
     this.session = this.userDefinitionsService.getDefinitions();
+    console.log(this.session);
   }
 
   ngOnInit() {
@@ -33,17 +31,14 @@ export class AppComponent implements OnInit {
     if (this.session) {
       this.setDefinitionDefault(this.session.language, this.session.theme);
     } else {
-      this.setDefinitionDefault(
-        UtilsForTranslations.portugueseLanguage,
-        ThemeProperties.lightClassName
-      );
+      this.setDefinitionDefault('pt', 'light-theme');
     }
   }
 
   setDefinitionDefault(lang: string, theme: string): void {
     this.userThemeService.setThemeSession(theme);
     this.userDefinitionsService.setDefinitionDefault(lang, theme);
-    this.translateService.addLangs(UtilsForTranslations.languages);
+    this.translateService.addLangs(this.languages);
     this.translateService.setDefaultLang(lang);
     this.translateService.use(lang);
   }

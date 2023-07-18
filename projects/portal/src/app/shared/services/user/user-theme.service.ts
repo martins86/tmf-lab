@@ -1,42 +1,54 @@
 import { Injectable } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
-import { ThemeProperties } from '@enums/theme-properties';
-
 import { UserDefinitionsService } from './user-definitions.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserThemeService {
-  light = ThemeProperties.lightClassName;
-  dark = ThemeProperties.darkClassName;
+  lightClassName = 'light-theme';
+  darkClassName = 'dark-theme';
 
   constructor(private userDefinitionsService: UserDefinitionsService) {}
 
   toggleThemes(toggleControl: FormControl, overlayElement: HTMLElement): void {
     toggleControl.valueChanges.subscribe((isDark: boolean) => {
       if (isDark) {
-        this.switchClass(this.dark, this.light, overlayElement);
-        this.userDefinitionsService.updateDefinitionItem('theme', this.dark);
+        this.switchClass(
+          this.darkClassName,
+          this.lightClassName,
+          overlayElement
+        );
+        this.userDefinitionsService.updateDefinitionItem(
+          'theme',
+          this.darkClassName
+        );
       } else {
-        this.switchClass(this.light, this.dark, overlayElement);
-        this.userDefinitionsService.updateDefinitionItem('theme', this.light);
+        this.switchClass(
+          this.lightClassName,
+          this.darkClassName,
+          overlayElement
+        );
+        this.userDefinitionsService.updateDefinitionItem(
+          'theme',
+          this.lightClassName
+        );
       }
     });
   }
 
   getThemeSession(): string {
     let userDefinitionSession = this.userDefinitionsService.getDefinitions();
-    return userDefinitionSession?.theme || ThemeProperties.lightClassName;
+    return userDefinitionSession?.theme || this.lightClassName;
   }
 
   setThemeSession(theme: string): void {
     this.userDefinitionsService.updateDefinitionItem('theme', theme);
-    if (theme === this.dark) {
-      this.switchClass(this.dark, this.light);
+    if (theme === this.darkClassName) {
+      this.switchClass(this.darkClassName, this.lightClassName);
     } else {
-      this.switchClass(this.light, this.dark);
+      this.switchClass(this.lightClassName, this.darkClassName);
     }
   }
 
@@ -52,6 +64,6 @@ export class UserThemeService {
     document.body.classList.remove(removeClass);
     document.body.classList.add(addClass);
     let element = document.querySelector('app-left-bar.dark-theme');
-    element?.classList.remove('dark-theme');
+    element?.classList.remove(this.darkClassName);
   }
 }

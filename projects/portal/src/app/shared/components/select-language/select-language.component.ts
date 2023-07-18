@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { UtilsForTranslations } from '@interfaces/itranslate.interface';
-
 import { UserDefinitionsService } from '@services/user/user-definitions.service';
 
 @Component({
@@ -12,7 +10,18 @@ import { UserDefinitionsService } from '@services/user/user-definitions.service'
 export class SelectLanguageComponent {
   session: any;
   textLanguage: string;
-  languageOptions = UtilsForTranslations.languageOptions;
+  languageOptions = [
+    {
+      language: 'pt',
+      textName: 'PT - Português',
+      translations: 'pt.json',
+    },
+    {
+      language: 'en',
+      textName: 'EN - English',
+      translations: 'en.json',
+    },
+  ];
 
   constructor(private userDefinitionsService: UserDefinitionsService) {
     this.session = this.userDefinitionsService.getDefinitions();

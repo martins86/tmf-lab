@@ -13,8 +13,8 @@ import {
 import { AppComponent } from './app.component';
 import { AppModule, HttpLoaderFactory } from './app.module';
 
-import { UserThemeService } from './shared/services/user/user-theme.service';
-import { UserDefinitionsService } from './shared/services/user/user-definitions.service';
+import { UserThemeService } from '@services/user/user-theme.service';
+import { UserDefinitionsService } from '@services/user/user-definitions.service';
 
 describe('Testes do AppComponent', () => {
   let app: AppComponent;
