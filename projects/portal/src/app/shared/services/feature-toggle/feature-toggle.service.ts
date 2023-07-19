@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, delay, finalize, first, of, tap } from 'rxjs';
+import { Observable, catchError, first, of, tap } from 'rxjs';
 
 import { IFeatureToggle } from '@interfaces/ifeature-toggle.interface';
-
-import { LoadingService } from '../loading/loading.service';
 
 import { environment } from '@environments/environment';
 
@@ -14,27 +12,18 @@ import { environment } from '@environments/environment';
 export class FeatureToggleService {
   private readonly API = environment.apiFt;
 
-  constructor(
-    private httpClient: HttpClient,
-    private loadingService: LoadingService
-  ) {}
+  constructor(private httpClient: HttpClient) {}
 
   getFeatureToggles(
     featureToggleKeys: string[]
   ): Observable<IFeatureToggle | null> {
-    this.loadingService.setSpinner(true);
-
     return this.httpClient.get<IFeatureToggle>(this.API).pipe(
       first(),
-      delay(5000),
       tap((response) => {
         return this.formatFeatureToggle(featureToggleKeys, response);
       }),
       catchError(() => {
         return of(null);
-      }),
-      finalize(() => {
-        this.loadingService.setSpinner(false);
       })
     );
   }
