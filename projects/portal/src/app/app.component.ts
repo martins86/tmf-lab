@@ -29,11 +29,10 @@ export class AppComponent implements OnInit {
   }
 
   firstLoadApp(): void {
-    if (this.session.language != '' && this.session.theme != '') {
-      this.setDefinitionDefault(this.session.language, this.session.theme);
-    } else {
-      this.setDefinitionDefault('pt', 'light-theme');
-    }
+    const setLanguage = this.session?.language ? this.session?.language : 'pt';
+    const setTheme = this.session?.theme ? this.session?.theme : 'light-theme';
+
+    this.setDefinitionDefault(setLanguage, setTheme);
   }
 
   setDefinitionDefault(lang: string, theme: string): void {
