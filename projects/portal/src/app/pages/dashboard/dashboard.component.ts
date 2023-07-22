@@ -11,18 +11,15 @@ export class DashboardComponent {
   ftAnyKeyC: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute) {
-    this.LoadFeatureToggleValues();
+    this.loadFeatureToggleValues();
   }
 
-  LoadFeatureToggleValues(): void {
+  loadFeatureToggleValues(): void {
     this.activatedRoute.data.subscribe((data: Data) => {
-      const ftKeyAIsEnable: boolean =
-        data?.['featureToggleValues'].ft_any_key_a.enabled;
-      const ftKeyCIsEnable: boolean =
-        data?.['featureToggleValues'].ft_any_key_b.enabled;
-
-      this.ftAnyKeyA = ftKeyAIsEnable ? ftKeyAIsEnable : false;
-      this.ftAnyKeyC = ftKeyCIsEnable ? ftKeyCIsEnable : false;
+      this.ftAnyKeyA =
+        data?.['featureToggleValues'].ft_any_key_a?.enabled ?? false;
+      this.ftAnyKeyC =
+        data?.['featureToggleValues'].ft_any_key_c?.enabled ?? false;
     });
   }
 }
