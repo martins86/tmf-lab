@@ -11,7 +11,7 @@
         "version_app": "Version"
       },
       "text_menu_pages": {
-        "page_dashboard": "Dashboard",
+        "page_dashboard": "Home",
         "page_profile": "Profile"
       }
     }
@@ -24,7 +24,7 @@
       "text_back_soon": "the site is in maintenance mode and will be back soon!"
     },
     "dashboard": {
-      "dashboard_title": "Dashboard"
+      "dashboard_title": "Home"
     }
   }
 }
