@@ -11,7 +11,7 @@
         "version_app": "Versão"
       },
       "text_menu_pages": {
-        "page_dashboard": "Painel",
+        "page_dashboard": "Inicio",
         "page_profile": "Perfil"
       }
     }
@@ -24,7 +24,7 @@
       "text_back_soon": "o site está em modo manutenção e retornara em breve!"
     },
     "dashboard": {
-      "dashboard_title": "Painel"
+      "dashboard_title": "Inicio"
     }
   }
 }
