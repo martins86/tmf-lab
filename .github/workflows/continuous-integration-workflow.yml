@@ -40,14 +40,14 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Check commit message
-        if: success()
-        uses: wagoid/commitlint-github-action@v1
-
       - name: Install dependencies
         if: success()
         run: |
-          npm ci
+          npm install
+
+      - name: Check commit message
+        if: success()
+        uses: wagoid/commitlint-github-action@v1
 
       - name: Build app
         if: success()
