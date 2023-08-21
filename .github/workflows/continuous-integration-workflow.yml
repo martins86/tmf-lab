@@ -6,11 +6,10 @@ on:
     branches: [master]
 
 jobs:
-  portal-ci:
+  build:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+    outputs:
+      build_id: ${{ steps.build_step.outputs.build_id }}
     strategy:
       matrix:
         node-version: [16.x]
@@ -51,13 +50,94 @@ jobs:
 
       - name: Build app
         if: success()
+        id: build_step
         run: |
           npm run build:ci
+
+  check-lint:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Cache node modules
+        id: cache-nodemodules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        if: success()
+        run: |
+          npm install
 
       - name: Check Lint
         if: success()
         run: |
           npm run lint
+
+  test-unit:
+    needs: [build, check-lint]
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Cache node modules
+        id: cache-nodemodules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        if: success()
+        run: |
+          npm install
 
       - name: Test Unit with coverage
         if: success()
@@ -70,6 +150,13 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+  deploy:
+    needs: [build, check-lint, test-unit]
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
