@@ -196,6 +196,10 @@ npx husky install
 ```
 
 ```sh
+npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}'
+```
+
+```sh
 npx husky add .husky/pre-commit "npm run pre-commit"
 ```
 
@@ -469,7 +473,29 @@ module.exports = function (config) {
 
 <br>
 
-## 11. Setup - Editando os Scripts no package
+## 11. Setup - Adicionando o Coveralls
+
+- [Coveralls](https://coveralls.io/)
+
+> Instalando package.
+
+```sh
+npm install coveralls --save-dev
+```
+
+> Script.
+
+```sh
+"coveralls": "cat ./coverage/lcov.info | coveralls"
+```
+
+<br>
+
+---
+
+<br>
+
+## 00. Setup - Editando os Scripts no package
 
 > Scripts no package.json.
 
@@ -484,9 +510,11 @@ module.exports = function (config) {
     "test:dev": "npm run test -- --progress --browsers Chrome",
     "test:ci": "npm run test -- --no-watch --no-progress --browsers ChromeHeadlessNoSandbox",
     "lint": "ng lint",
+    "commit": "git-cz",
     "pre-commit": "npx --no-install lint-staged && npm run lint",
     "sonar": "sonar-scanner -Dsonar.login=eec5da7da1fe70005eecea1552e3e30de6407ea9",
     "pre-push": "npm run test:ci && npm run sonar",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "postinstall": "npx husky install && chmod ug+x .husky/*"
 ```
 
