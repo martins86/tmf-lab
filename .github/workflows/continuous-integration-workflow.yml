@@ -52,7 +52,7 @@ jobs:
       - name: Build app
         if: success()
         run: |
-          run build:ci
+          npm run build:ci
 
       - name: Check Lint
         if: success()
