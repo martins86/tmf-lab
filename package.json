@@ -16,6 +16,7 @@
     "pre-commit": "npx --no-install lint-staged && npm run lint",
     "sonar": "sonar-scanner -Dsonar.login=eec5da7da1fe70005eecea1552e3e30de6407ea9",
     "pre-push": "npm run test:ci && npm run sonar",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "postinstall": "npx husky install && chmod ug+x .husky/*"
   },
   "private": true,
@@ -55,6 +56,7 @@
     "@typescript-eslint/parser": "5.11.0",
     "angular-cli-ghpages": "^1.0.6",
     "commitizen": "^4.3.0",
+    "coveralls": "^3.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.43.0",
     "husky": "^8.0.3",
