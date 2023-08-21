@@ -23,6 +23,7 @@
     "richie5um2.vscode-sort-json",
     "tabnine.tabnine-vscode",
     "hbenl.vscode-test-explorer",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "cschleiden.vscode-github-actions"
   ]
 }
