@@ -46,7 +46,7 @@ describe('Testes do BottomBarComponent', () => {
     });
   });
 
-  describe('Testando o texto translate en no footer', () => {
+  describe('Testando o texto traduzido em en no footer', () => {
     beforeEach(async () => {
       await TestBed.configureTestingModule({
         declarations: [BottomBarComponent],
@@ -65,7 +65,7 @@ describe('Testes do BottomBarComponent', () => {
       return beforeEachAll();
     });
 
-    it('Deve ser exibido o texto "TMF Lab © All rights reserved 2023- current year" ', () => {
+    it('Deve ser exibido o texto "TMF Lab © All rights reserved 2023-currentYear" ', () => {
       // Arrange
       const textEn = `TMF Lab © All rights reserved 2023-${component.currentYear}`;
       const textElement = textElementByCss(By.css('p'))
@@ -77,7 +77,7 @@ describe('Testes do BottomBarComponent', () => {
     });
   });
 
-  describe('Testando o texto translate pt no footer', () => {
+  describe('Testando o texto traduzido em pt no footer', () => {
     beforeEach(async () => {
       await TestBed.configureTestingModule({
         declarations: [BottomBarComponent],
@@ -96,7 +96,7 @@ describe('Testes do BottomBarComponent', () => {
       return beforeEachAll();
     });
 
-    it('Deve ser exibido o texto "TMF Lab © Todos os direitos reservados 2023- current year" ', () => {
+    it('Deve ser exibido o texto "TMF Lab © Todos os direitos reservados 2023-currentYear" ', () => {
       // Arrange
       const textPT = `TMF Lab © Todos os direitos reservados 2023-${component.currentYear}`;
       const textElement = textElementByCss(By.css('p'))

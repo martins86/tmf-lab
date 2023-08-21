@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TopBarComponent } from './top-bar.component';
 
-describe('TopBarComponent', () => {
+describe('Testes do TopBarComponent', () => {
   let component: TopBarComponent;
   let fixture: ComponentFixture<TopBarComponent>;
 
@@ -20,12 +20,12 @@ describe('TopBarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deve criar o TopBarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  describe('Testing toggleBtnAnimate', () => {
-    it('should not set classList "active" before toggleBtnAnimate call', () => {
+  describe('Testando o toggleBtnAnimate', () => {
+    it('Deve manter sem o "active" até chamar o toggleBtnAnimate', () => {
       // Arrange
       let btnElement =
         fixture.debugElement.nativeElement.querySelector('.toggle');
@@ -35,7 +35,7 @@ describe('TopBarComponent', () => {
       expect(btnElement.classList).not.toContain('active');
     });
 
-    it('should set classList "active" after toggleBtnAnimate call', () => {
+    it('Deve usar o "active" após chamar o toggleBtnAnimate', () => {
       // Arrange
       let btnElement =
         fixture.debugElement.nativeElement.querySelector('.toggle');
@@ -49,8 +49,8 @@ describe('TopBarComponent', () => {
     });
   });
 
-  describe('Testing toggleLeftBar', () => {
-    it('should emit emitToggleLeftBar', () => {
+  describe('Testando o toggleLeftBar', () => {
+    it('Deve emit emitToggleLeftBar', () => {
       // Arrange
       spyOn(component.emitToggleLeftBar, 'emit');
 
@@ -59,6 +59,16 @@ describe('TopBarComponent', () => {
 
       // Assert
       expect(component.emitToggleLeftBar.emit).toHaveBeenCalled();
+    });
+
+    it('Deve emit com a string toggleLeftBar', () => {
+      // Arrange
+      spyOn(component.emitToggleLeftBar, 'emit');
+
+      // Act
+      component.toggleLeftBar();
+
+      // Assert
       expect(component.emitToggleLeftBar.emit).toHaveBeenCalledWith(
         'toggleLeftBar'
       );
