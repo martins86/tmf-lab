@@ -2,8 +2,11 @@ name: TMF Lab - Portal - CI/CD
 
 on:
   pull_request:
+    branches: [master]
   push:
     branches: [master]
+  schedule:
+    - cron: '0 9 * * 1,2,3,4,5'
 
 jobs:
   build:
@@ -100,7 +103,7 @@ jobs:
           npm run lint
 
   test-unit:
-    needs: [build, check-lint]
+    needs: build
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
