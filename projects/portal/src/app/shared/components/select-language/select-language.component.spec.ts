@@ -6,7 +6,7 @@ import { UserDefinitionsService } from '@services/user/user-definitions.service'
 import { SelectLanguageComponent } from './select-language.component';
 import { SelectLanguageModule } from './select-language.module';
 
-describe('SelectLanguageComponent', () => {
+describe('Testes do SelectLanguageComponent', () => {
   let component: SelectLanguageComponent;
   let fixture: ComponentFixture<SelectLanguageComponent>;
   let userDefinitionsService: UserDefinitionsService;
@@ -27,7 +27,7 @@ describe('SelectLanguageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deve criar o SelectLanguageComponent', () => {
     expect(component).toBeTruthy();
   });
 });

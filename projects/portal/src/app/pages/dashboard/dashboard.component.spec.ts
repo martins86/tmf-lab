@@ -7,7 +7,7 @@ import { TranslateStubModule } from '@utils/stubs/translate-stub.module';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardModule } from './dashboard.module';
 
-describe('DashboardComponent', () => {
+describe('Testes do DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
 
@@ -25,7 +25,7 @@ describe('DashboardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deve criar o DashboardComponent', () => {
     expect(component).toBeTruthy();
   });
 });

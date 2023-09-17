@@ -4,7 +4,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FeatureToggleService } from './feature-toggle.service';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-describe('FeatureToggleService', () => {
+describe('Testes do FeatureToggleService', () => {
   let service: FeatureToggleService;
 
   beforeEach(() => {
@@ -16,7 +16,7 @@ describe('FeatureToggleService', () => {
     service = TestBed.inject(FeatureToggleService);
   });
 
-  it('should be created', () => {
+  it('Deve criar o FeatureToggleService', () => {
     expect(service).toBeTruthy();
   });
 });
