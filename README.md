@@ -121,7 +121,7 @@
 
 [![CI Build](https://github.com/martins86/tmf-lab/actions/workflows/continuous-integration-workflow.yml/badge.svg)](https://github.com/martins86/tmf-lab/actions/workflows/continuous-integration-workflow.yml)
 &nbsp;
-![GitHub package.json version](https://img.shields.io/github/package-json/v/martins86/mfe-portal)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/martins86/tmf-lab)
 &nbsp;
 ![GitHub last commit](https://img.shields.io/github/last-commit/martins86/tmf-lab)
 &nbsp;
@@ -141,7 +141,7 @@
 &nbsp;
 ![node-current](https://img.shields.io/node/v/latest-version)
 &nbsp;
-![GitHub top language](https://img.shields.io/github/languages/top/martins86/mfe-portal)
+![GitHub top language](https://img.shields.io/github/languages/top/martins86/tmf-lab)
 
 </div>
 </div>
