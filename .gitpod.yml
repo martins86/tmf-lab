@@ -38,18 +38,6 @@ tasks:
     init: echo n | npm i -g @angular/cli@13.2.0 && npm i -g commitizen
     command: npm install && npm run start
 
-# Github
-github:
-  prebuilds:
-    master: true
-    branches: true
-    pullRequests: true
-    pullRequestsFromForks: true
-    addCheck: true
-    addComment: true
-    addBadge: false
-    addLabel: false
-
 vscode:
   extensions:
     - hbenl.vscode-jasmine-test-adapter
