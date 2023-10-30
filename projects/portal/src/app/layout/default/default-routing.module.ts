@@ -16,6 +16,28 @@ const routes: Routes = [
           ),
         pathMatch: 'full',
       },
+      {
+        path: 'login',
+        loadChildren: () =>
+          import('@pages/login/login.module').then(
+            (module) => module.LoginModule
+          ),
+        pathMatch: 'full',
+      },
+      {
+        path: 'maintenance',
+        loadChildren: () =>
+          import('@pages/maintenance/maintenance.module').then(
+            (module) => module.MaintenanceModule
+          ),
+      },
+      {
+        path: '**',
+        loadChildren: () =>
+          import('@pages/not-found/not-found.module').then(
+            (module) => module.NotFoundModule
+          ),
+      },
     ],
   },
 ];
