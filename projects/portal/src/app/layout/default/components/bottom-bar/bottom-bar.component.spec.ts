@@ -41,7 +41,7 @@ describe('Testes do BottomBarComponent', () => {
       return beforeEachAll();
     });
 
-    it('Deve criar o Footer', () => {
+    it('Deve inicializar o Footer', () => {
       expect(component).toBeTruthy();
     });
   });

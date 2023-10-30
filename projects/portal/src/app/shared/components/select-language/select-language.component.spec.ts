@@ -27,7 +27,7 @@ describe('Testes do SelectLanguageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Deve criar o SelectLanguageComponent', () => {
+  it('Deve inicializar o SelectLanguageComponent', () => {
     expect(component).toBeTruthy();
   });
 });

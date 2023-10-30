@@ -16,7 +16,7 @@ describe('Testes do UserThemeService', () => {
     userDefinitionsService = TestBed.inject(UserDefinitionsService);
   });
 
-  it('Deve criar o serviço UserThemeService', () => {
+  it('Deve inicializar o serviço UserThemeService', () => {
     expect(service).toBeTruthy();
   });
 

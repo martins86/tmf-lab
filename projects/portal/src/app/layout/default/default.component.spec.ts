@@ -33,7 +33,7 @@ describe('Testes do DefaultComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Deve criar o DefaultComponent', () => {
+  it('Deve inicializar o DefaultComponent', () => {
     expect(component).toBeTruthy();
   });
 

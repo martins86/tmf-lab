@@ -18,7 +18,7 @@ describe('Testes do LoadingComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Deve criar o LoadingComponent', () => {
+  it('Deve inicializar o LoadingComponent', () => {
     expect(component).toBeTruthy();
   });
 });

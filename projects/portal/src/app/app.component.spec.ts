@@ -52,7 +52,7 @@ describe('Testes do AppComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Deve criar o App', () => {
+  it('Deve inicializar o App', () => {
     expect(app).toBeTruthy();
   });
 

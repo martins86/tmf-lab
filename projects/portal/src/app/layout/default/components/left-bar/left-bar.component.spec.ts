@@ -37,7 +37,7 @@ describe('Testes do LeftBarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Deve criar o LeftBarComponent', () => {
+  it('Deve inicializar o LeftBarComponent', () => {
     expect(component).toBeTruthy();
   });
 

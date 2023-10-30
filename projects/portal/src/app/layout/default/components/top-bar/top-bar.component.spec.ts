@@ -20,7 +20,7 @@ describe('Testes do TopBarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Deve criar o TopBarComponent', () => {
+  it('Deve inicializar o TopBarComponent', () => {
     expect(component).toBeTruthy();
   });
 

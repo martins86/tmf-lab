@@ -15,7 +15,7 @@ describe('Testes do UserDefinitionsService', () => {
     sessionStorage = window.sessionStorage;
   });
 
-  it('Deve criar o UserDefinitionsService', () => {
+  it('Deve inicializar o UserDefinitionsService', () => {
     expect(service).toBeTruthy();
   });
 

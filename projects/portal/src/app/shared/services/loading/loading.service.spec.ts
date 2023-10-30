@@ -10,7 +10,7 @@ describe('Testes do LoadingService', () => {
     service = TestBed.inject(LoadingService);
   });
 
-  it('Deve criar o LoadingService', () => {
+  it('Deve inicializar o LoadingService', () => {
     expect(service).toBeTruthy();
   });
 });

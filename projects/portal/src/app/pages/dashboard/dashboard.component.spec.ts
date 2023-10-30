@@ -25,7 +25,7 @@ describe('Testes do DashboardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Deve criar o DashboardComponent', () => {
+  it('Deve inicializar o DashboardComponent', () => {
     expect(component).toBeTruthy();
   });
 });
