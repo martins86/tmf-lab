@@ -15,76 +15,76 @@
 ```sh
 .
 ├── ...
-├── 📁docs/-----------------------------------------------------------> # Documentação.
-│   ├── 📁features/---------------------------------------------------> # Arquivos com detalhes de próximos passos/implementações.
+├── 📁docs/--------------------------------------> # Documentação.
+│   ├── 📁features/------------------------------> # Arquivos com detalhes de próximos passos/implementações.
 │   │   └── ...
-│   ├── 📁prints/-----------------------------------------------------> # Imagens usadas na documentação.
+│   ├── 📁prints/--------------------------------> # Imagens usadas na documentação.
 │   │   └── ...
-│   ├── git-commit.md-------------------------------------------------> # Guia de como fazer um commit no projeto.
-│   ├── git-flow.md---------------------------------------------------> # Guia de branch's.
-│   ├── todo.md-------------------------------------------------------> # Rascunho do que estou fazendo.
+│   ├── git-commit.md----------------------------> # Guia de como fazer um commit no projeto.
+│   ├── git-flow.md------------------------------> # Guia de branch's.
+│   ├── todo.md----------------------------------> # Rascunho do que estou fazendo.
 │   └── ...
 ├── 📁.github/
-│   ├── 📁workflows/--------------------------------------------------> # Arquivo yml com o fluxo de CI/CD
+│   ├── 📁workflows/-----------------------------> # Arquivo yml com o fluxo de CI/CD
 │   │   └── continuous-integration-workflow.yml
 │   └── ...
-├── 📁.husky/----------------------------------------------------------> # Arquivos de configuração do pre commit/push
+├── 📁.husky/------------------------------------> # Arquivos de configuração do pre commit/push
 │   └── ...
-├── 📁.vscode/---------------------------------------------------------> # Arquivos com extensões, snippets, settings do vscode.
+├── 📁.vscode/-----------------------------------> # Arquivos com extensões, snippets, settings do vscode.
 │   └── ...
-├── 📁node_modules/---------------------------------------------------> # Pacotes usados no projeto.
+├── 📁node_modules/------------------------------> # Pacotes usados no projeto.
 │   └── ...
 ├── 📁projects/
 │   ├── 📁portal/
 │   │   ├── 📁src/
 │   │   │   ├── 📁app/
 │   │   │   │   ├── 📁layout/
-│   │   │   │   │   ├── 📁default/------------------------------------> # Modulo do theme default.
-│   │   │   │   │   │   ├── 📁components/-----------------------------> # Componentes exclusivos do theme default (Top bar, Menu lateral e Footer).
+│   │   │   │   │   ├── 📁default/------------------> # Modulo do theme default.
+│   │   │   │   │   │   ├── 📁components/-----------> # Componentes exclusivos do theme default (Top bar, Menu lateral e Footer).
 │   │   │   │   │   │   │   └── ...
-│   │   │   │   │   │   ├── 📁theme/----------------------------------> # Folhas de estilos para o theme default.
+│   │   │   │   │   │   ├── 📁theme/----------------> # Folhas de estilos para o theme default.
 │   │   │   │   │   │   │   ├── 📁style/
 │   │   │   │   │   │   │   └── ...
 │   │   │   │   │   │   └── ...
-│   │   │   │   ├── 📁pages/------------------------------------------> # Diretório das páginas do projeto.
-│   │   │   │   │   ├── 📁dashboard/----------------------------------> # Modulo página de dashboard.
+│   │   │   │   ├── 📁pages/------------------------> # Diretório das páginas do projeto.
+│   │   │   │   │   ├── 📁dashboard/----------------> # Modulo página de dashboard.
 │   │   │   │   │   │   └── ...
-│   │   │   │   ├── 📁shared/-----------------------------------------> # Diretório das itens compartilhados por todo o projeto.
+│   │   │   │   ├── 📁shared/-----------------------> # Diretório das itens compartilhados por todo o projeto.
 │   │   │   │   │   ├── 📁components/
-│   │   │   │   │   │   ├── 📁select-language/------------------------> # Modulo componente que faz a troca de linguagem / tradução.
+│   │   │   │   │   │   ├── 📁select-language/------> # Modulo componente que faz a troca de linguagem / tradução.
 │   │   │   │   │   │   │   └── ...
 │   │   │   │   │   │   └── ...
-│   │   │   │   │   ├── 📁interfaces/---------------------------------> # Arquivos de interfaces / model.
+│   │   │   │   │   ├── 📁interfaces/---------------> # Arquivos de interfaces / model.
 │   │   │   │   │   │   └── ...
 │   │   │   │   │   ├── 📁services/
-│   │   │   │   │   │   ├── 📁feature-toggle/-------------------------> # Serviço que busca as feature toggles.
+│   │   │   │   │   │   ├── 📁feature-toggle/-------> # Serviço que busca as feature toggles.
 │   │   │   │   │   │   │   └── ...
-│   │   │   │   │   │   ├── 📁loading/--------------------------------> # Serviço que controla o loading nas páginas (requisição http).
+│   │   │   │   │   │   ├── 📁loading/--------------> # Serviço que controla o loading nas páginas (requisição http).
 │   │   │   │   │   │   │   └── ...
-│   │   │   │   │   │   ├── 📁user/-----------------------------------> # Serviço de controle de usuário.
+│   │   │   │   │   │   ├── 📁user/-----------------> # Serviço de controle de usuário.
 │   │   │   │   │   │   │   └── ...
 │   │   │   │   │   │   └── ...
 │   │   │   │   │   ├── 📁utils/
-│   │   │   │   │   │   ├── 📁stubs/-----------------------------------> # Stubs / Mocks reutilizados em testes de unidade.
+│   │   │   │   │   │   ├── 📁stubs/----------------> # Stubs / Mocks reutilizados em testes de unidade.
 │   │   │   │   │   │   │   └── ...
 │   │   │   │   │   │   └── ...
 │   │   │   │   │   └── ...
 │   │   │   │   ├── ...
 │   │   │   │   └── ...
 │   │   │   ├── 📁assets/
-│   │   │   │   ├── 📁data/------------------------------------------> # Dados para um fake api.
+│   │   │   │   ├── 📁data/--------------------------> # Dados para um fake api.
 │   │   │   │   │   └── ...
-│   │   │   │   ├── 📁i18n/------------------------------------------> # Arquivos de tradução do projeto en / pt.
+│   │   │   │   ├── 📁i18n/--------------------------> # Arquivos de tradução do projeto en / pt.
 │   │   │   │   │   ├── en.json
 │   │   │   │   │   ├── pt.json
 │   │   │   │   │   └── ...
-│   │   │   │   ├── 📁icons/-----------------------------------------> # Icones personalizados.
+│   │   │   │   ├── 📁icons/--------------------------> # Icones personalizados.
 │   │   │   │   │   └── favicon.ico
 │   │   │   │   │   └── ...
-│   │   │   │   ├── 📁images/----------------------------------------> # Imagens.
+│   │   │   │   ├── 📁images/-------------------------> # Imagens.
 │   │   │   │   │   ├── logo.png
 │   │   │   │   │   └── ...
-│   │   │   │   ├── 📁styles/----------------------------------------> # Folhas de estilos compartilháveis.
+│   │   │   │   ├── 📁styles/-------------------------> # Folhas de estilos compartilháveis.
 │   │   │   │   │   ├── media-devices-breakpoints.scss
 │   │   │   │   │   └── ...
 │   │   │   │   └── ...
@@ -97,9 +97,24 @@
 └── ...
 ```
 
+<br>
+<br>
+
 ## Abrir IDE On-line
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/workspaces)
+
+<br>
+<br>
+
+# Scripts no(s) package(s)
+
+| Ação                                                                 | Comando          |
+| -------------------------------------------------------------------- | ---------------- |
+| `Inicia o App local na porta 4200`                                   | npm run start    |
+| `Roda os testes de unidade com cobertura`                            | npm run test     |
+| `Roda os testes de unidade com cobertura no Chrome`                  | npm run test:dev |
+| `Roda os testes de unidade com cobertura no ChromeHeadlessNoSandbox` | npm run test:ci  |
 
 <br>
 <br>
