@@ -44,6 +44,7 @@ describe('Testes do UserDefinitionsService', () => {
         language: 'en',
         theme: 'dark-theme',
       });
+      service.setDefinitionDefault('pt', 'light-theme');
 
       // Act
       service.updateDefinitionItem('language', 'en');
