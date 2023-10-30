@@ -86,6 +86,18 @@ ng g m pages/login --routing
 ng g c pages/login
 ```
 
+> cria o module e o router maintenance.
+
+```sh
+ng g m pages/maintenance --routing
+```
+
+> cria a pagina maintenance.
+
+```sh
+ng g c pages/maintenance
+```
+
 > cria o module e o router not-found.
 
 ```sh
