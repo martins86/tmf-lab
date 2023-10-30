@@ -115,3 +115,83 @@ ng g c pages/not-found
 ---
 
 <br>
+
+## 4. Interceptores - Criando interceptadores de navegação
+
+> cria o Authentication Interceptor.
+
+```sh
+ng g interceptor core/interceptors/authentication/auth
+```
+
+> cria o Error Handling Interceptor.
+
+```sh
+ng g interceptor core/interceptors/error/error
+```
+
+> cria o Logging Interceptor.
+
+```sh
+ng g interceptor core/interceptors/logging/logging
+```
+
+> cria o Caching Interceptor.
+
+```sh
+ng g interceptor core/interceptors/cache/cache
+```
+
+> cria o Headers Interceptor.
+
+```sh
+ng g interceptor core/interceptors/headers/headers
+```
+
+> cria o Loading Indicator Interceptor.
+
+```sh
+ng g interceptor core/interceptors/loading-indicator/loading-indicator
+```
+
+> cria o Timeout Interceptor.
+
+```sh
+ng g interceptor core/interceptors/timeout/timeout
+```
+
+> cria o Base URL Interceptor.
+
+```sh
+ng g interceptor core/interceptors/baseurl/baseurl
+```
+
+> cria o Retry Interceptor.
+
+```sh
+ng g interceptor core/interceptors/retry/retry
+```
+
+> cria o JWT Refresh Token Interceptor.
+
+```sh
+ng g interceptor core/interceptors/jwt/jwt-refresh
+```
+
+> cria o Localization Interceptor.
+
+```sh
+ng g interceptor core/interceptors/localization/localization
+```
+
+> cria o Localization Interceptor.
+
+```sh
+ng g interceptor core/interceptors/compression/compression
+```
+
+<br>
+
+---
+
+<br>
