@@ -1,28 +1,34 @@
 .header-page {
-  display: flex;
-  align-content: center;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: 2px solid;
-  padding-bottom: 5px;
+	display: flex;
+	align-content: center;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 2px solid;
+	padding-bottom: 5px;
 }
 
 .header-page h1 {
-  margin-bottom: 0;
-  margin-left: 5px;
+	margin-bottom: 0;
+	margin-left: 5px;
 }
 
 .form-register {
-  display: flex;
-  flex-direction: column;
-  margin: 60px;
-  row-gap: 18px;
+	display: flex;
+	flex-direction: column;
+	margin: 60px;
+	row-gap: 30px;
 }
 
-.btn-register {
-  max-width: 260px;
-  &:disabled {
-    cursor: not-allowed;
-  }
+.btn-form {
+	max-width: 260px;
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+.form-actions {
+	display: flex;
+	flex-direction: row;
+	column-gap: 12px;
 }

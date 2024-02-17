@@ -2,22 +2,56 @@
 .mat-raised-button,
 .mat-stroked-button,
 .mat-flat-button {
-  padding: 0 1.15em;
-  margin: 0 0.65em;
-  min-width: 3em;
-  line-height: 36.4px;
+	padding: 0 1.15em;
+	margin: 0 0.65em;
+	min-width: 3em;
+	line-height: 36.4px;
 }
 
 .mat-standard-chip {
-  padding: 0.5em 0.85em;
-  min-height: 2.5em;
+	padding: 0.5em 0.85em;
+	min-height: 2.5em;
 }
 
 .material-icons {
-  font-size: 24px;
-  font-family: 'Material Icons', sans-serif;
+	font-size: 24px;
+	font-family: 'Material Icons', sans-serif;
 
-  .mat-badge-content {
-    font-family: 'Poppins', sans-serif;
-  }
+	.mat-badge-content {
+		font-family: 'Poppins', sans-serif;
+	}
+}
+
+.light-theme .mat-raised-button.mat-primary {
+	color: var(--white-color);
+}
+
+.mat-form-field-valid {
+	&.mat-form-field-appearance-outline .mat-form-field-outline-start {
+		border-color: var(--success-color);
+	}
+
+	&.mat-form-field-appearance-outline .mat-form-field-outline-end {
+		border-color: var(--success-color);
+	}
+
+	&.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-outline-gap {
+		border-bottom-color: var(--success-color);
+	}
+
+	&.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+		color: var(--success-color);
+	}
+
+	&.mat-form-field .mat-form-field-prefix .mat-icon,
+	&.mat-form-field .mat-form-field-suffix .mat-icon {
+		color: var(--success-color);
+	}
+}
+
+.mat-form-field-invalid {
+	&.mat-form-field .mat-form-field-prefix .mat-icon,
+	&.mat-form-field .mat-form-field-suffix .mat-icon {
+		color: var(--warn-color);
+	}
 }
