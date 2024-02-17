@@ -17,6 +17,22 @@
           {{ 'layout.left_bar.text_menu_pages.page_dashboard' | translate }}
         </div>
       </mat-list-item>
+      <mat-list-item
+        [routerLink]="['/register']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        role="listitem"
+      >
+        <mat-icon
+          mat-list-icon
+          aria-hidden="false"
+          aria-label="ícone person add"
+          >person_add</mat-icon
+        >
+        <div mat-line>
+          {{ 'layout.left_bar.text_menu_pages.page_register' | translate }}
+        </div>
+      </mat-list-item>
     </mat-list>
   </mat-nav-list>
 

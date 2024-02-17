@@ -22,13 +22,19 @@ const routes: Routes = [
           import('@pages/login/login.module').then(
             (module) => module.LoginModule
           ),
-        pathMatch: 'full',
       },
       {
         path: 'maintenance',
         loadChildren: () =>
           import('@pages/maintenance/maintenance.module').then(
             (module) => module.MaintenanceModule
+          ),
+      },
+      {
+        path: 'register',
+        loadChildren: () =>
+          import('@pages/register/register.module').then(
+            (module) => module.RegisterModule
           ),
       },
       {
