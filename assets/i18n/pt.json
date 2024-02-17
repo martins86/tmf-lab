@@ -12,7 +12,8 @@
       },
       "text_menu_pages": {
         "page_dashboard": "Inicio",
-        "page_profile": "Perfil"
+        "page_profile": "Perfil",
+        "page_register": "Cadastro"
       }
     }
   },
@@ -25,6 +26,9 @@
     },
     "dashboard": {
       "dashboard_title": "Inicio"
+    },
+    "register": {
+      "register_title": "Cadastro"
     }
   }
 }
