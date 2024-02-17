@@ -1,0 +1,55 @@
+<div class="register">
+  <div class="header-page">
+    <mat-icon mat-list-icon aria-hidden="false" aria-label="ícone criar"
+      >person_add</mat-icon
+    >
+    <h1>{{ 'pages.register.register_title' | translate }}</h1>
+  </div>
+  <div class="content-page">
+    <section>
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()"
+        class="form-register"
+      >
+        <mat-form-field appearance="outline">
+          <mat-label for="name">Digite seu nome:</mat-label>
+          <input
+            id="name"
+            matInput
+            placeholder="Fulano da Silva"
+            [formControl]="controlName"
+            name="name"
+            required
+          />
+          <mat-error *ngIf="controlName.hasError('required')"
+            >Nome é Obrigatório!</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label for="email">Digite seu e-mail:</mat-label>
+          <input
+            id="email"
+            matInput
+            placeholder="name@example.com"
+            [formControl]="controlEmail"
+            name="email"
+            required
+          />
+          <mat-error *ngIf="controlEmail.invalid">{{
+            getErrorEmailMessage()
+          }}</mat-error>
+        </mat-form-field>
+
+        <button
+          class="btn-register"
+          mat-raised-button
+          color="primary"
+          [disabled]="!registerForm.valid"
+        >
+          Cadastrar
+        </button>
+      </form>
+    </section>
+  </div>
+</div>

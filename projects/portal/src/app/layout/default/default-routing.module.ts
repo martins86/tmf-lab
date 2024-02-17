@@ -33,8 +33,8 @@ const routes: Routes = [
       {
         path: 'register',
         loadChildren: () =>
-          import('@pages/register/register-routing.module').then(
-            (module) => module.RegisterRoutingModule
+          import('@pages/register/register.module').then(
+            (module) => module.RegisterModule
           ),
       },
       {

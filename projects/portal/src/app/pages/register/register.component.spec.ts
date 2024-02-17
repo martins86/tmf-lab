@@ -1,14 +1,21 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterComponent } from './register.component';
+import { TranslateStubModule } from '@utils/stubs/translate-stub.module';
 
-describe('RegisterComponent', () => {
+import { RegisterComponent } from './register.component';
+import { RegisterModule } from './register.module';
+import { RouterModule } from '@angular/router';
+
+describe('Testes do RegisterComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [RegisterComponent],
+      imports: [RegisterModule, TranslateStubModule, RouterModule.forRoot([])],
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   });
 
@@ -18,7 +25,7 @@ describe('RegisterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deve inicializar o RegisterComponent', () => {
     expect(component).toBeTruthy();
   });
 });
