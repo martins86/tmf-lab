@@ -36,7 +36,7 @@ tasks:
   - name: Setup, Install
     before: export NG_CLI_ANALYTICS=ci
     init: echo n | npm i -g @angular/cli@13.2.0 && npm i -g commitizen
-    command: npm install && npm run start
+    command: npm ci && npm run start
 
 vscode:
   extensions:
