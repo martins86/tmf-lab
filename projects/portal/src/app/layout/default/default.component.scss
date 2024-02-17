@@ -1,23 +1,23 @@
 mat-drawer-container {
-  height: calc(100vh - 112px);
+	height: calc(100vh - 112px);
 }
 
 main {
-  padding: var(--all-padding);
+	padding: var(--all-padding);
 }
 
 app-bottom-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 @media only screen and (min-width: 600px) {
-  mat-drawer-container {
-    height: calc(100vh - 128px);
+	mat-drawer-container {
+		height: calc(100vh - 128px);
 
-    mat-drawer {
-      width: 300px;
-    }
-  }
+		mat-drawer {
+			width: 300px;
+		}
+	}
 }

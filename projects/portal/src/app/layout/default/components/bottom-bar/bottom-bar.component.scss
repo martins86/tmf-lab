@@ -1,15 +1,15 @@
 footer {
-  p {
-    font-size: 0.85rem;
-    margin: 0;
-    color: var(--text-primary-lighter-color);
-  }
+	p {
+		font-size: 0.85rem;
+		margin: 0;
+		color: var(--text-primary-lighter-color);
+	}
 }
 
 @media only screen and (max-width: 600px) {
-  footer {
-    span {
-      display: none;
-    }
-  }
+	footer {
+		span {
+			display: none;
+		}
+	}
 }

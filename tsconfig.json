@@ -1,45 +1,45 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@workspace/*": ["./*"],
-      "@app/*": ["./projects/portal/src/app/*"],
-      "@core/*": ["./projects/portal/src/app/core/*"],
-      "@pages/*": ["./projects/portal/src/app/pages/*"],
-      "@services/*": ["./projects/portal/src/app/shared/services/*"],
-      "@directives/*": ["./projects/portal/src/app/shared/directives/*"],
-      "@interfaces/*": ["./projects/portal/src/app/shared/interfaces/*"],
-      "@pipes/*": ["./projects/portal/src/app/shared/pipes/*"],
-      "@components/*": ["./projects/portal/src/app/shared/components/*"],
-      "@layout/*": ["./projects/portal/src/app/layout/*"],
-      "@utils/*": ["./projects/portal/src/app/shared/utils/*"],
-      "@environments/*": ["./projects/portal/src/environments/*"],
-      "@enums/*": ["./projects/portal/src/app/shared/enums/*"]
-    },
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
-    "lib": ["es2020", "dom"],
-    "resolveJsonModule": true
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@workspace/*": ["./*"],
+			"@app/*": ["./projects/portal/src/app/*"],
+			"@core/*": ["./projects/portal/src/app/core/*"],
+			"@pages/*": ["./projects/portal/src/app/pages/*"],
+			"@services/*": ["./projects/portal/src/app/shared/services/*"],
+			"@directives/*": ["./projects/portal/src/app/shared/directives/*"],
+			"@interfaces/*": ["./projects/portal/src/app/shared/interfaces/*"],
+			"@pipes/*": ["./projects/portal/src/app/shared/pipes/*"],
+			"@components/*": ["./projects/portal/src/app/shared/components/*"],
+			"@layout/*": ["./projects/portal/src/app/layout/*"],
+			"@utils/*": ["./projects/portal/src/app/shared/utils/*"],
+			"@environments/*": ["./projects/portal/src/environments/*"],
+			"@enums/*": ["./projects/portal/src/app/shared/enums/*"]
+		},
+		"outDir": "./dist/out-tsc",
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"sourceMap": true,
+		"declaration": false,
+		"downlevelIteration": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"importHelpers": true,
+		"target": "es2017",
+		"module": "es2020",
+		"lib": ["es2020", "dom"],
+		"resolveJsonModule": true
+	},
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"strictTemplates": true
+	}
 }

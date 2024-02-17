@@ -7,27 +7,27 @@ import { SelectLanguageComponent } from './select-language.component';
 import { SelectLanguageModule } from './select-language.module';
 
 describe('Testes do SelectLanguageComponent', () => {
-  let component: SelectLanguageComponent;
-  let fixture: ComponentFixture<SelectLanguageComponent>;
-  let userDefinitionsService: UserDefinitionsService;
+	let component: SelectLanguageComponent;
+	let fixture: ComponentFixture<SelectLanguageComponent>;
+	let userDefinitionsService: UserDefinitionsService;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [SelectLanguageComponent],
-      imports: [SelectLanguageModule],
-      providers: [UserDefinitionsService],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
-    userDefinitionsService = TestBed.inject(UserDefinitionsService);
-  });
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [SelectLanguageComponent],
+			imports: [SelectLanguageModule],
+			providers: [UserDefinitionsService],
+			schemas: [NO_ERRORS_SCHEMA],
+		}).compileComponents();
+		userDefinitionsService = TestBed.inject(UserDefinitionsService);
+	});
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SelectLanguageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(SelectLanguageComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('Deve inicializar o SelectLanguageComponent', () => {
-    expect(component).toBeTruthy();
-  });
+	it('Deve inicializar o SelectLanguageComponent', () => {
+		expect(component).toBeTruthy();
+	});
 });

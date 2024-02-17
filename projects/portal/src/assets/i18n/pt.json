@@ -1,34 +1,34 @@
 {
-  "layout": {
-    "bottom_bar": {
-      "text_copyright": "Todos os direitos reservados"
-    },
-    "left_bar": {
-      "text_label_bar": {
-        "pages": "Páginas",
-        "theme": "Tema",
-        "theme_options": "Claro/Escuro",
-        "version_app": "Versão"
-      },
-      "text_menu_pages": {
-        "page_dashboard": "Inicio",
-        "page_profile": "Perfil",
-        "page_register": "Cadastro"
-      }
-    }
-  },
-  "pages": {
-    "not_found": {
-      "text_error_404": "ERRO 404!! - Conteúdo não encontrado."
-    },
-    "maintenance": {
-      "text_back_soon": "o site está em modo manutenção e retornara em breve!"
-    },
-    "dashboard": {
-      "dashboard_title": "Inicio"
-    },
-    "register": {
-      "register_title": "Cadastro"
-    }
-  }
+	"layout": {
+		"bottom_bar": {
+			"text_copyright": "Todos os direitos reservados"
+		},
+		"left_bar": {
+			"text_label_bar": {
+				"pages": "Páginas",
+				"theme": "Tema",
+				"theme_options": "Claro/Escuro",
+				"version_app": "Versão"
+			},
+			"text_menu_pages": {
+				"page_dashboard": "Inicio",
+				"page_profile": "Perfil",
+				"page_register": "Cadastro"
+			}
+		}
+	},
+	"pages": {
+		"not_found": {
+			"text_error_404": "ERRO 404!! - Conteúdo não encontrado."
+		},
+		"maintenance": {
+			"text_back_soon": "o site está em modo manutenção e retornara em breve!"
+		},
+		"dashboard": {
+			"dashboard_title": "Inicio"
+		},
+		"register": {
+			"register_title": "Cadastro"
+		}
+	}
 }

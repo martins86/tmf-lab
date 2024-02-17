@@ -1,6 +1,6 @@
 {
-  "sonarlint.connectedMode.project": {
-    "connectionId": "Sonar Martins86",
-    "projectKey": "martins86_tmf-lab"
-  }
+	"sonarlint.connectedMode.project": {
+		"connectionId": "Sonar Martins86",
+		"projectKey": "martins86_tmf-lab"
+	}
 }

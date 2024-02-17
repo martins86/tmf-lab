@@ -5,8 +5,8 @@ import { MaintenanceRoutingModule } from './maintenance-routing.module';
 import { MaintenanceComponent } from './maintenance.component';
 
 @NgModule({
-  declarations: [MaintenanceComponent],
-  imports: [CommonModule, MaintenanceRoutingModule],
-  exports: [MaintenanceComponent],
+	declarations: [MaintenanceComponent],
+	imports: [CommonModule, MaintenanceRoutingModule],
+	exports: [MaintenanceComponent],
 })
 export class MaintenanceModule {}

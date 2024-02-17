@@ -9,8 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 const MatModules = [MatMenuModule, MatButtonModule, MatIconModule];
 
 @NgModule({
-  declarations: [SelectLanguageComponent],
-  imports: [CommonModule, ...MatModules],
-  exports: [SelectLanguageComponent],
+	declarations: [SelectLanguageComponent],
+	imports: [CommonModule, ...MatModules],
+	exports: [SelectLanguageComponent],
 })
 export class SelectLanguageModule {}

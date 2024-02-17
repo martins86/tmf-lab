@@ -1,28 +1,28 @@
 .loading-content {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 0;
-  backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-  z-index: 1;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	backdrop-filter: blur(6px);
+	display: flex;
+	justify-content: center;
+	z-index: 1;
 }
 
 .content-spinner {
-  align-self: center;
-  display: inline-block;
-  position: relative;
+	align-self: center;
+	display: inline-block;
+	position: relative;
 
-  img {
-    max-width: 100%;
-    position: absolute;
-    max-height: 100%;
-    height: 45%;
-    width: 45%;
-    top: 25%;
-    left: 25%;
-  }
+	img {
+		max-width: 100%;
+		position: absolute;
+		max-height: 100%;
+		height: 45%;
+		width: 45%;
+		top: 25%;
+		left: 25%;
+	}
 }

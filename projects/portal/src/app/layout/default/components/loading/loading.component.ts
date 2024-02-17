@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 import { LoadingService } from '@services/loading/loading.service';
 
 @Component({
-  selector: 'app-loading',
-  templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.scss'],
+	selector: 'app-loading',
+	templateUrl: './loading.component.html',
+	styleUrls: ['./loading.component.scss'],
 })
 export class LoadingComponent {
-  constructor(public loader: LoadingService) {}
+	constructor(public loader: LoadingService) {}
 }

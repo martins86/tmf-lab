@@ -10,85 +10,79 @@ import { DefaultModule } from './default.module';
 import { TranslateStubModule } from '../../shared/utils/stubs/translate-stub.module';
 
 describe('Testes do DefaultComponent', () => {
-  let component: DefaultComponent;
-  let fixture: ComponentFixture<DefaultComponent>;
+	let component: DefaultComponent;
+	let fixture: ComponentFixture<DefaultComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [DefaultComponent],
-      imports: [
-        DefaultModule,
-        BrowserAnimationsModule,
-        RouterTestingModule,
-        HttpClientTestingModule,
-        TranslateStubModule,
-      ],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
-  });
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [DefaultComponent],
+			imports: [DefaultModule, BrowserAnimationsModule, RouterTestingModule, HttpClientTestingModule, TranslateStubModule],
+			schemas: [NO_ERRORS_SCHEMA],
+		}).compileComponents();
+	});
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(DefaultComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(DefaultComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('Deve inicializar o DefaultComponent', () => {
-    expect(component).toBeTruthy();
-  });
+	it('Deve inicializar o DefaultComponent', () => {
+		expect(component).toBeTruthy();
+	});
 
-  describe('Testando o toggleLeftBar', () => {
-    it('Deve iniciar o leftBarOpen com false', () => {
-      // Assert
-      expect(component.leftBarOpen).toBe(false);
-    });
+	describe('Testando o toggleLeftBar', () => {
+		it('Deve iniciar o leftBarOpen com false', () => {
+			// Assert
+			expect(component.leftBarOpen).toBe(false);
+		});
 
-    it('Deve mudar o valor de leftBarOpen false para true', () => {
-      expect(component.leftBarOpen).toBe(false);
+		it('Deve mudar o valor de leftBarOpen false para true', () => {
+			expect(component.leftBarOpen).toBe(false);
 
-      // Act
-      component.toggleLeftBar();
+			// Act
+			component.toggleLeftBar();
 
-      // Assert
-      expect(component.leftBarOpen).toBe(true);
-    });
+			// Assert
+			expect(component.leftBarOpen).toBe(true);
+		});
 
-    it('Deve mudar o valor de leftBarOpen para false', () => {
-      // Arrange
-      component.leftBarOpen = true;
-      expect(component.leftBarOpen).toBe(true);
+		it('Deve mudar o valor de leftBarOpen para false', () => {
+			// Arrange
+			component.leftBarOpen = true;
+			expect(component.leftBarOpen).toBe(true);
 
-      // Act
-      component.toggleLeftBar();
+			// Act
+			component.toggleLeftBar();
 
-      // Assert
-      expect(component.leftBarOpen).toBe(false);
-    });
-  });
+			// Assert
+			expect(component.leftBarOpen).toBe(false);
+		});
+	});
 
-  describe('Testando o closeLeftBar', () => {
-    it('Deve mudar o valor de leftBarOpen para false', () => {
-      // Arrange
-      component.leftBarOpen = true;
-      expect(component.leftBarOpen).toBe(true);
+	describe('Testando o closeLeftBar', () => {
+		it('Deve mudar o valor de leftBarOpen para false', () => {
+			// Arrange
+			component.leftBarOpen = true;
+			expect(component.leftBarOpen).toBe(true);
 
-      // Act
-      component.closeLeftBar();
+			// Act
+			component.closeLeftBar();
 
-      // Assert
-      expect(component.leftBarOpen).toBe(false);
-    });
+			// Assert
+			expect(component.leftBarOpen).toBe(false);
+		});
 
-    it('Deve manter o valor de leftBarOpen com false', () => {
-      // Arrange
-      component.leftBarOpen = false;
-      expect(component.leftBarOpen).toBe(false);
+		it('Deve manter o valor de leftBarOpen com false', () => {
+			// Arrange
+			component.leftBarOpen = false;
+			expect(component.leftBarOpen).toBe(false);
 
-      // Act
-      component.closeLeftBar();
+			// Act
+			component.closeLeftBar();
 
-      // Assert
-      expect(component.leftBarOpen).toBe(false);
-    });
-  });
+			// Assert
+			expect(component.leftBarOpen).toBe(false);
+		});
+	});
 });

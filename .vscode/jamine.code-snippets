@@ -1,40 +1,20 @@
 {
-  "describe template - Jasmine": {
-    "prefix": "describe-jasmine",
-    "body": ["describe('${1:Testando o }', () => {", "\t${2}", "});"],
-    "description": "Template Describe para o jasmine.",
-    "scope": "typescript,javascript"
-  },
-  "it template - Jasmine": {
-    "prefix": "it-jasmine",
-    "body": [
-      "\tit('${1:Deve }', () => {",
-      "\t\t// Arrange",
-      "\t\t${2}",
-      "\t\t// Act",
-      "\t\t${3}",
-      "\t\t// Assert",
-      "\t\texpect(${4})${5:.toBe}(${6});",
-      "\t});"
-    ],
-    "description": "Template It para o jasmine sem Describe.",
-    "scope": "typescript,javascript"
-  },
-  "describe it template - Jasmine": {
-    "prefix": "describe-with-it-jasmine",
-    "body": [
-      "describe('${1:Testando o }', () => {",
-      "\tit('${2:Deve }', () => {",
-      "\t\t// Arrange",
-      "\t\t${3}",
-      "\t\t// Act",
-      "\t\t${4}",
-      "\t\t// Assert",
-      "\t\texpect(${5})${6:.toBe}(${7});",
-      "\t});",
-      "});"
-    ],
-    "description": "Template Describe para o jasmine com It.",
-    "scope": "typescript,javascript"
-  }
+	"describe template - Jasmine": {
+		"prefix": "describe-jasmine",
+		"body": ["describe('${1:Testando o }', () => {", "\t${2}", "});"],
+		"description": "Template Describe para o jasmine.",
+		"scope": "typescript,javascript"
+	},
+	"it template - Jasmine": {
+		"prefix": "it-jasmine",
+		"body": ["\tit('${1:Deve }', () => {", "\t\t// Arrange", "\t\t${2}", "\t\t// Act", "\t\t${3}", "\t\t// Assert", "\t\texpect(${4})${5:.toBe}(${6});", "\t});"],
+		"description": "Template It para o jasmine sem Describe.",
+		"scope": "typescript,javascript"
+	},
+	"describe it template - Jasmine": {
+		"prefix": "describe-with-it-jasmine",
+		"body": ["describe('${1:Testando o }', () => {", "\tit('${2:Deve }', () => {", "\t\t// Arrange", "\t\t${3}", "\t\t// Act", "\t\t${4}", "\t\t// Assert", "\t\texpect(${5})${6:.toBe}(${7});", "\t});", "});"],
+		"description": "Template Describe para o jasmine com It.",
+		"scope": "typescript,javascript"
+	}
 }

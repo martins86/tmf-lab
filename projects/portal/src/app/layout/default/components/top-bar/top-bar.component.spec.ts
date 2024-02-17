@@ -4,74 +4,70 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TopBarComponent } from './top-bar.component';
 
 describe('Testes do TopBarComponent', () => {
-  let component: TopBarComponent;
-  let fixture: ComponentFixture<TopBarComponent>;
+	let component: TopBarComponent;
+	let fixture: ComponentFixture<TopBarComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [TopBarComponent],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
-  });
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [TopBarComponent],
+			schemas: [NO_ERRORS_SCHEMA],
+		}).compileComponents();
+	});
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TopBarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(TopBarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('Deve inicializar o TopBarComponent', () => {
-    expect(component).toBeTruthy();
-  });
+	it('Deve inicializar o TopBarComponent', () => {
+		expect(component).toBeTruthy();
+	});
 
-  describe('Testando o toggleBtnAnimate', () => {
-    it('Deve manter sem o "active" até chamar o toggleBtnAnimate', () => {
-      // Arrange
-      let btnElement =
-        fixture.debugElement.nativeElement.querySelector('.toggle');
+	describe('Testando o toggleBtnAnimate', () => {
+		it('Deve manter sem o "active" até chamar o toggleBtnAnimate', () => {
+			// Arrange
+			let btnElement = fixture.debugElement.nativeElement.querySelector('.toggle');
 
-      // Assert
-      expect(btnElement).toBeTruthy();
-      expect(btnElement.classList).not.toContain('active');
-    });
+			// Assert
+			expect(btnElement).toBeTruthy();
+			expect(btnElement.classList).not.toContain('active');
+		});
 
-    it('Deve usar o "active" após chamar o toggleBtnAnimate', () => {
-      // Arrange
-      let btnElement =
-        fixture.debugElement.nativeElement.querySelector('.toggle');
+		it('Deve usar o "active" após chamar o toggleBtnAnimate', () => {
+			// Arrange
+			let btnElement = fixture.debugElement.nativeElement.querySelector('.toggle');
 
-      // Act
-      btnElement.click();
+			// Act
+			btnElement.click();
 
-      // Assert
-      expect(btnElement).toBeTruthy();
-      expect(btnElement.classList).toContain('active');
-    });
-  });
+			// Assert
+			expect(btnElement).toBeTruthy();
+			expect(btnElement.classList).toContain('active');
+		});
+	});
 
-  describe('Testando o toggleLeftBar', () => {
-    it('Deve emit emitToggleLeftBar', () => {
-      // Arrange
-      spyOn(component.emitToggleLeftBar, 'emit');
+	describe('Testando o toggleLeftBar', () => {
+		it('Deve emit emitToggleLeftBar', () => {
+			// Arrange
+			spyOn(component.emitToggleLeftBar, 'emit');
 
-      // Act
-      component.toggleLeftBar();
+			// Act
+			component.toggleLeftBar();
 
-      // Assert
-      expect(component.emitToggleLeftBar.emit).toHaveBeenCalled();
-    });
+			// Assert
+			expect(component.emitToggleLeftBar.emit).toHaveBeenCalled();
+		});
 
-    it('Deve emit com a string toggleLeftBar', () => {
-      // Arrange
-      spyOn(component.emitToggleLeftBar, 'emit');
+		it('Deve emit com a string toggleLeftBar', () => {
+			// Arrange
+			spyOn(component.emitToggleLeftBar, 'emit');
 
-      // Act
-      component.toggleLeftBar();
+			// Act
+			component.toggleLeftBar();
 
-      // Assert
-      expect(component.emitToggleLeftBar.emit).toHaveBeenCalledWith(
-        'toggleLeftBar'
-      );
-    });
-  });
+			// Assert
+			expect(component.emitToggleLeftBar.emit).toHaveBeenCalledWith('toggleLeftBar');
+		});
+	});
 });

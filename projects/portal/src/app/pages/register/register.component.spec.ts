@@ -9,29 +9,24 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('Testes do RegisterComponent', () => {
-  let component: RegisterComponent;
-  let fixture: ComponentFixture<RegisterComponent>;
+	let component: RegisterComponent;
+	let fixture: ComponentFixture<RegisterComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [RegisterComponent],
-      imports: [
-        RegisterModule,
-        BrowserAnimationsModule,
-        TranslateStubModule,
-        RouterModule.forRoot([]),
-      ],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
-  });
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [RegisterComponent],
+			imports: [RegisterModule, BrowserAnimationsModule, TranslateStubModule, RouterModule.forRoot([])],
+			schemas: [NO_ERRORS_SCHEMA],
+		}).compileComponents();
+	});
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(RegisterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(RegisterComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('Deve inicializar o RegisterComponent', () => {
-    expect(component).toBeTruthy();
-  });
+	it('Deve inicializar o RegisterComponent', () => {
+		expect(component).toBeTruthy();
+	});
 });

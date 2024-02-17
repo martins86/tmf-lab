@@ -1,4 +1,4 @@
 export interface ISessionUser {
-  language: string;
-  theme: string;
+	language: string;
+	theme: string;
 }

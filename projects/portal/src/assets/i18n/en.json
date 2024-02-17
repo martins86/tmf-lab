@@ -1,34 +1,34 @@
 {
-  "layout": {
-    "bottom_bar": {
-      "text_copyright": "All rights reserved"
-    },
-    "left_bar": {
-      "text_label_bar": {
-        "pages": "Pages",
-        "theme": "Theme",
-        "theme_options": "Light/Dark",
-        "version_app": "Version"
-      },
-      "text_menu_pages": {
-        "page_dashboard": "Home",
-        "page_profile": "Profile",
-        "page_register": "Register"
-      }
-    }
-  },
-  "pages": {
-    "not_found": {
-      "text_error_404": "ERROR 404!! - Content not found."
-    },
-    "maintenance": {
-      "text_back_soon": "the site is in maintenance mode and will be back soon!"
-    },
-    "dashboard": {
-      "dashboard_title": "Home"
-    },
-    "register": {
-      "register_title": "Register"
-    }
-  }
+	"layout": {
+		"bottom_bar": {
+			"text_copyright": "All rights reserved"
+		},
+		"left_bar": {
+			"text_label_bar": {
+				"pages": "Pages",
+				"theme": "Theme",
+				"theme_options": "Light/Dark",
+				"version_app": "Version"
+			},
+			"text_menu_pages": {
+				"page_dashboard": "Home",
+				"page_profile": "Profile",
+				"page_register": "Register"
+			}
+		}
+	},
+	"pages": {
+		"not_found": {
+			"text_error_404": "ERROR 404!! - Content not found."
+		},
+		"maintenance": {
+			"text_back_soon": "the site is in maintenance mode and will be back soon!"
+		},
+		"dashboard": {
+			"dashboard_title": "Home"
+		},
+		"register": {
+			"register_title": "Register"
+		}
+	}
 }

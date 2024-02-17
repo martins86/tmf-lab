@@ -8,13 +8,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    MatIconModule,
-    TranslateModule.forChild(),
-  ],
-  exports: [DashboardComponent],
+	declarations: [DashboardComponent],
+	imports: [CommonModule, DashboardRoutingModule, MatIconModule, TranslateModule.forChild()],
+	exports: [DashboardComponent],
 })
 export class DashboardModule {}

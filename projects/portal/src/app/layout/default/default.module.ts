@@ -12,16 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-const materialModules = [
-  MatSidenavModule,
-  MatSlideToggleModule,
-  ReactiveFormsModule,
-  MatIconModule,
-  MatButtonModule,
-  MatListModule,
-  MatDividerModule,
-  MatToolbarModule,
-];
+const materialModules = [MatSidenavModule, MatSlideToggleModule, ReactiveFormsModule, MatIconModule, MatButtonModule, MatListModule, MatDividerModule, MatToolbarModule];
 
 import { DefaultRoutingModule } from './default-routing.module';
 import { DefaultComponent } from './default.component';
@@ -35,20 +26,8 @@ import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component';
 
 @NgModule({
-  declarations: [
-    DefaultComponent,
-    TopBarComponent,
-    LeftBarComponent,
-    BottomBarComponent,
-  ],
-  imports: [
-    CommonModule,
-    DefaultRoutingModule,
-    TranslateModule.forChild(),
-    ...materialModules,
-    LoadingModule,
-    SelectLanguageModule,
-  ],
-  exports: [DefaultComponent],
+	declarations: [DefaultComponent, TopBarComponent, LeftBarComponent, BottomBarComponent],
+	imports: [CommonModule, DefaultRoutingModule, TranslateModule.forChild(), ...materialModules, LoadingModule, SelectLanguageModule],
+	exports: [DefaultComponent],
 })
 export class DefaultModule {}
