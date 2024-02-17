@@ -12,7 +12,8 @@
       },
       "text_menu_pages": {
         "page_dashboard": "Home",
-        "page_profile": "Profile"
+        "page_profile": "Profile",
+        "page_register": "Register"
       }
     }
   },
@@ -25,6 +26,9 @@
     },
     "dashboard": {
       "dashboard_title": "Home"
+    },
+    "register": {
+      "register_title": "Register"
     }
   }
 }
