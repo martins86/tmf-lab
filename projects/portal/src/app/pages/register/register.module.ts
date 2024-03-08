@@ -13,13 +13,15 @@ import { MatSelectModule } from '@angular/material/select';
 
 const materialModules = [FormsModule, ReactiveFormsModule, MatIconModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule];
 
+import { PhoneMaskDirective, ValidatePhoneService } from '../../shared/directives/phone-mask.directive';
+
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register.component';
 
 @NgModule({
-	declarations: [RegisterComponent],
+	declarations: [RegisterComponent, PhoneMaskDirective],
 	imports: [CommonModule, RegisterRoutingModule, ...materialModules, TranslateModule.forChild()],
-	providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline', floatLabel: 'auto' } }],
+	providers: [ValidatePhoneService, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline', floatLabel: 'auto' } }],
 	exports: [RegisterComponent],
 })
 export class RegisterModule {}

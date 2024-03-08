@@ -12,10 +12,15 @@ import { ISelectItem } from '@interfaces/iselect-item.interface';
 export class RegisterComponent {
 	registerForm!: FormGroup;
 	controlName!: FormControl;
+	controlBirthDate!: FormControl;
+	controlDocument!: FormControl;
+	controlPhone!: FormControl;
 	controlEmail!: FormControl;
 	controlNickname!: FormControl;
 	controlItem!: FormControl;
 	listItems!: ISelectItem[];
+
+	regexCPF = 'd{3}.d{3}.d{3}-d{2}';
 
 	constructor(private formBuilder: FormBuilder) {
 		this.startControlFields();
@@ -34,7 +39,10 @@ export class RegisterComponent {
 
 	startControlFields(): void {
 		this.controlName = new FormControl('', Validators.required);
-		this.controlEmail = new FormControl('', Validators.pattern(/.+@.+\..+/));
+		this.controlEmail = new FormControl('', Validators.email);
+		this.controlBirthDate = new FormControl('', Validators.required);
+		this.controlDocument = new FormControl('', [Validators.required]);
+		this.controlPhone = new FormControl('', Validators.required);
 		this.controlNickname = new FormControl('');
 		this.controlItem = new FormControl('', [Validators.required, Validators.minLength(3)]);
 	}
@@ -42,6 +50,9 @@ export class RegisterComponent {
 	startRegisterForm(): void {
 		this.registerForm = this.formBuilder.group({
 			fieldName: this.controlName,
+			fieldBirthDate: this.controlBirthDate,
+			fieldDocument: this.controlDocument,
+			fieldPhone: this.controlPhone,
 			fieldEmail: this.controlEmail,
 			fieldNickname: this.controlNickname,
 			fieldItem: this.controlItem,

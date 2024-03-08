@@ -16,7 +16,7 @@
 
 				<mat-form-field [ngClass]="getStyle(controlEmail)">
 					<mat-label for="email">Digite seu e-mail:</mat-label>
-					<input id="email" matInput placeholder="name@example.com" [formControl]="controlEmail" name="email" required />
+					<input id="email" matInput placeholder="name@example.com" [formControl]="controlEmail" name="email" type="email" required />
 					<mat-icon *ngIf="controlEmail.valid && controlEmail.touched" matSuffix>sentiment_very_satisfied</mat-icon>
 					<mat-icon *ngIf="controlEmail.invalid && controlEmail.touched" matSuffix>sentiment_very_dissatisfied</mat-icon>
 					<mat-error *ngIf="controlEmail.invalid">{{ getErrorEmailMessage() }}</mat-error>
@@ -26,6 +26,26 @@
 					<mat-label for="surname">Seu apelido</mat-label>
 					<input id="surname" matInput maxlength="15" placeholder="Ex. Tiozão" [formControl]="controlNickname" name="surname" />
 					<mat-hint align="end">{{ controlNickname.value.length }}/15</mat-hint>
+				</mat-form-field>
+
+				<mat-form-field>
+					<mat-label for="birthDate">Data Nascimento</mat-label>
+					<input id="birthDate" matInput type="date" placeholder="00/00/0000" [formControl]="controlBirthDate" name="birthDate" required />
+					<mat-error *ngIf="controlBirthDate.hasError('required')">Item Obrigatório!</mat-error>
+				</mat-form-field>
+
+				<mat-form-field hintLabel="ex: 000.000.000-00">
+					<mat-label for="document">CPF</mat-label>
+					<input id="document" matInput type="text" title="Digite um CPF no formato: 000.000.000-00" placeholder="000.000.000-00" [formControl]="controlDocument" name="document" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required />
+					<mat-error *ngIf="controlDocument.hasError('required')">Item Obrigatório!</mat-error>
+					<mat-error *ngIf="controlDocument.hasError('pattern')">Informe um número valido! ex: 000.000.000-00</mat-error>
+				</mat-form-field>
+
+				<mat-form-field>
+					<mat-label for="phone">Celular</mat-label>
+					<input id="phone" matInput type="tel" placeholder="(99) 99999-9999" [formControl]="controlPhone" name="phone" appPhoneMask required />
+					<mat-error *ngIf="controlPhone.hasError('required')">Item Obrigatório!</mat-error>
+					<mat-error *ngIf="controlPhone.hasError('phone-mask')">Informe um número valido!</mat-error>
 				</mat-form-field>
 
 				<mat-form-field [ngClass]="{ 'not-allowed': controlItem.hasError('minlength') }" hintLabel="Max 1 item">
